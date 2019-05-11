@@ -1,15 +1,15 @@
 from flask import Blueprint
 from flask_restplus import Api
 
-from .Routes.area import ns_area
-from .Routes.capacity import ns_capacity
-from .Routes.gearRatios import ns_gear_ratios
-from .Routes.length import ns_length
-from .Routes.revolutions import ns_revolutions
-from .Routes.speed import ns_speed
-from .Routes.temperature import ns_temperature
-from .Routes.torque import ns_torque
-from .Routes.weight import ns_weight
+from Routes.area import ns_area
+from Routes.capacity import ns_capacity
+from Routes.gearRatios import ns_gear_ratios
+from Routes.length import ns_length
+from Routes.revolutions import ns_revolutions
+from Routes.speed import ns_speed
+from Routes.temperature import ns_temperature
+from Routes.torque import ns_torque
+from Routes.weight import ns_weight
 
 blueprint = Blueprint('api', __name__, url_prefix='/api/v1')
 api = Api(blueprint, version='1.0',

@@ -1,5 +1,5 @@
 from flask_restplus import Namespace, Resource
-from ConversionAPI.Conversions import area
+from Conversions import area
 
 ns_area = Namespace('Area', description='Area calculations')
 

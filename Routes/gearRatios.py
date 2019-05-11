@@ -1,5 +1,5 @@
 from flask_restplus import Namespace, Resource
-from ConversionAPI.Conversions import gearRatios
+from Conversions import gearRatios
 
 ns_gear_ratios = Namespace('GearRatio', description='Gear Ratio calculations')
 

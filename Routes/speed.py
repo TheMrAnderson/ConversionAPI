@@ -1,5 +1,5 @@
 from flask_restplus import Namespace, Resource
-from ConversionAPI.Conversions import speed
+from Conversions import speed
 
 ns_speed = Namespace('Speed', description='Speed calculations')
 
