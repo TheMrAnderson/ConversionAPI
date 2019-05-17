@@ -1,48 +1,48 @@
-def acre_to_sq_ft(input):
+def acre_to_ft2(input):
     return input * 43650
 
 
-def acre_to_sq_mile(input):
+def acre_to_mile2(input):
     return input * 0.0015625
 
 
-def acre_to_sq_yard(input):
+def acre_to_yard2(input):
     return input * 4840
 
 
-def sq_ft_to_acre(input):
+def ft2_to_acre(input):
     return input * 0.0000229568411386593
 
 
-def sq_ft_to_sq_in(input):
+def ft2_to_in2(input):
     return input * 144
 
 
-def sq_in_to_sq_ft(input):
+def in2_to_ft2(input):
     return input * 0.00694444444444444
 
 
-def sq_in_to_sq_yard(input):
+def in2_to_yard2(input):
     return input * 0.000771604938271605
 
 
-def sq_mile_to_sq_acre(input):
+def mile2_to_acre(input):
     return input * 640
 
 
-def sq_rod_to_sq_yard(input):
+def rod2_to_yard2(input):
     return input * 30.25
 
 
-def sq_yard_to_acre(input):
+def yard2_to_acre(input):
     return input * 0.000206611570247934
 
 
-def sq_yard_to_sq_in(input):
+def yard2_to_in2(input):
     return input * 1296
 
 
-def sq_yard_to_sq_rod(input):
+def yard2_to_rod2(input):
     return input * 0.0330578512396694
 
 

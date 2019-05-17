@@ -1,4 +1,4 @@
-def bushel_to_cu_in(input):
+def bushel_to_in3(input):
     return input * 2150.42
 
 
