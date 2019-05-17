@@ -4,92 +4,131 @@ from Conversions import area
 ns_area = Namespace('Area', description='Area calculations')
 
 
-@ns_area.route('/Acre/<float:input>/ToSqFt')
-@ns_area.route('/Acre/<int:input>/ToSqFt')
+@ns_area.route('/Acre/<string:input>/ToSquareFoot')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.acre_to_sq_ft(input)
+        try:
+            input = float(input)
+            return area.acre_to_ft2(input), 200
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/Acre/<float:input>/ToSqMile')
-@ns_area.route('/Acre/<int:input>/ToSqMile')
+@ns_area.route('/Acre/<string:input>/ToSquareMile')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.acre_to_sq_mile(input)
+        try:
+            input = float(input)
+            return area.acre_to_mile2(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/Acre/<float:input>/ToSqYard')
-@ns_area.route('/Acre/<int:input>/ToSqYard')
+@ns_area.route('/Acre/<string:input>/ToSquareYard')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.acre_to_sq_yard(input)
+        try:
+            input = float(input)
+            return area.acre_to_yard2(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/SquareFoot/<float:input>/ToAcre')
-@ns_area.route('/SquareFoot/<int:input>/ToAcre')
+@ns_area.route('/SquareFoot/<string:input>/ToAcre')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.sq_ft_to_acre(input)
+        try:
+            input = float(input)
+            return area.ft2_to_acre(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/SquareFoot/<float:input>/ToSquareInch')
-@ns_area.route('/SquareFoot/<float:input>/ToSquareInch')
+@ns_area.route('/SquareFoot/<string:input>/ToSquareInch')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.sq_ft_to_sq_in(input)
+        try:
+            input = float(input)
+            return area.ft2_to_in2(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/SquareInch/<float:input>/ToSquareFoot')
-@ns_area.route('/SquareInch/<int:input>/ToSquareFoot')
+@ns_area.route('/SquareInch/<string:input>/ToSquareFoot')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.sq_in_to_sq_ft(input)
+        try:
+            input = float(input)
+            return area.in2_to_ft2(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/SquareMile/<float:input>/ToSquareAcre')
-@ns_area.route('/SquareMile/<int:input>/ToSquareAcre')
+@ns_area.route('/SquareInch/<string:input>/ToSquareYard')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.sq_mile_to_sq_acre(input)
+        try:
+            input = float(input)
+            return area.in2_to_yard2
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/SquareMile/<float:input>/ToAcre')
-@ns_area.route('/SquareMile/<int:input>/ToAcre')
+@ns_area.route('/SquareMile/<string:input>/ToAcre')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.sq_mile_to_acre(input)
+        try:
+            input = float(input)
+            return area.mile2_to_acre(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/SquareRod/<float:input>/ToSquareYard')
-@ns_area.route('/SquareRod/<int:input>/ToSquareYard')
+@ns_area.route('/SquareRod/<string:input>/ToSquareYard')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.sq_rod_to_sq_yard(input)
+        try:
+            input = float(input)
+            return area.rod2_to_yard2(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/SquareYard/<float:input>/ToAcre')
-@ns_area.route('/SquareYard/<int:input>/ToAcre')
+@ns_area.route('/SquareYard/<string:input>/ToAcre')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.sq_yard_to_acre(input)
+        try:
+            input = float(input)
+            return area.yard2_to_acre(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/SquareYard/<float:input>/ToSquareInch')
-@ns_area.route('/SquareYard/<int:input>/ToSquareInch')
+@ns_area.route('/SquareYard/<string:input>/ToSquareInch')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.sq_yard_to_sq_in(input)
+        try:
+            input = float(input)
+            return area.yard2_to_in2(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/SquareYard/<float:input>/ToSquareRod')
-@ns_area.route('/SquareYard/<int:input>/ToSquareRod')
+@ns_area.route('/SquareYard/<string:input>/ToSquareRod')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.sq_yard_to_sq_rod(input)
+        try:
+            input = float(input)
+            return area.yard2_to_rod2(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
 
 
-@ns_area.route('/Circumference/<float:input>')
-@ns_area.route('/Circumference/<int:input>')
+@ns_area.route('/Circumference/<string:input>')
 class ConversionsArea(Resource):
     def get(self, input):
-        return area.circumference(input)
+        try:
+            input = float(input)
+            return area.circumference(input)
+        except ValueError:
+            return "Can't convert {} to number".format(input), 400
