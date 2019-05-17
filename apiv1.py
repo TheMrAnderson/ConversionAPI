@@ -11,7 +11,7 @@ from Routes.temperature import ns_temperature
 from Routes.torque import ns_torque
 from Routes.weight import ns_weight
 
-blueprint = Blueprint('api', __name__, url_prefix='/api/v1')
+blueprint = Blueprint('apiv1', __name__, url_prefix='/api/v1')
 api = Api(blueprint, version='1.0',
           title='Conversion API',
           description='API to consolidate conversions')
