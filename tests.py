@@ -3,7 +3,7 @@ import unittest
 class Tests(unittest.TestCase):
 
 	def test_1(self):
-		pass
+		self.assertTrue(1==1, "One no longer equals one")
 
 if __name__ == '__main__':
     unittest.main()
