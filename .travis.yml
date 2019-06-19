@@ -1,4 +1,4 @@
 language: python
 
 script:
-  - tests
+  - python3 -m unittest discover
