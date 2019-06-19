@@ -1,4 +1,4 @@
 language: python
 
 script:
-  tests.py
+  - tests.py
