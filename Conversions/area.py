@@ -1,5 +1,5 @@
 def acre_to_ft2(input):
-    return input * 43650
+    return input * 43560
 
 
 def acre_to_mile2(input):
@@ -11,7 +11,7 @@ def acre_to_yard2(input):
 
 
 def ft2_to_acre(input):
-    return input * 0.0000229568411386593
+    return input / 43560
 
 
 def ft2_to_in2(input):
@@ -19,11 +19,11 @@ def ft2_to_in2(input):
 
 
 def in2_to_ft2(input):
-    return input * 0.00694444444444444
+    return input / 144
 
 
 def in2_to_yard2(input):
-    return input * 0.000771604938271605
+    return input / 1296
 
 
 def mile2_to_acre(input):
@@ -35,7 +35,7 @@ def rod2_to_yard2(input):
 
 
 def yard2_to_acre(input):
-    return input * 0.000206611570247934
+    return input / 4840
 
 
 def yard2_to_in2(input):
