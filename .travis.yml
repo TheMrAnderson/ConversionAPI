@@ -1,10 +1,5 @@
 language: python
 
-install:
-  - pip install python-coveralls
-  - pip install coverage       # Add me to install coverage.py
-  - pip install nose           # Add me to install nose
-
 script:
   # - python3 -m unittest discover
   - nosetests --with-coverage # Add me to run nose with coverage support.
