@@ -1,5 +1,5 @@
 from flask_restplus import Namespace, Resource
-from Conversions import gearRatios
+from Conversions import gear_ratios
 
 ns_gear_ratios = Namespace('GearRatio', description='Gear Ratio calculations')
 
@@ -11,7 +11,7 @@ class ConversionsGearRatios(Resource):
             newTireDiam = float(newTireDiam)
             oldTireDiam = float(oldTireDiam)
             oldAxleRatio = float(oldAxleRatio)
-            return gearRatios.determine_new_gear_ratio(newTireDiam, oldTireDiam, oldAxleRatio)
+            return gear_ratios.new_gear_ratio(newTireDiam, oldTireDiam, oldAxleRatio)
         except ValueError:
             return "Can't convert {} to number".format(newTireDiam, oldTireDiam, oldAxleRatio), 400
 
@@ -23,7 +23,7 @@ class ConversionsGearRatios(Resource):
             newTireDiam = float(newTireDiam)
             oldTireDiam = float(oldTireDiam)
             axleRatio = float(axleRatio)
-            return gearRatios.determine_effective_gear_ratio(newTireDiam, oldTireDiam, axleRatio)
+            return gear_ratios.effective_gear_ratio(newTireDiam, oldTireDiam, axleRatio)
         except ValueError:
             return "Can't convert {} to number".format(newTireDiam, oldTireDiam, axleRatio), 400
 
@@ -36,7 +36,7 @@ class ConversionsGearRatios(Resource):
             vehicleSpeedMph = float(vehicleSpeedMph)
             transmissionRatio = float(transmissionRatio)
             tireDiameterInch = float(tireDiameterInch)
-            return gearRatios.engine_rpm(axleRatio, vehicleSpeedMph, transmissionRatio, tireDiameterInch)
+            return gear_ratios.engine_rpm(axleRatio, vehicleSpeedMph, transmissionRatio, tireDiameterInch)
         except ValueError:
             return "Can't convert {} to number".format(axleRatio, vehicleSpeedMph, transmissionRatio, tireDiameterInch), 400
 
@@ -51,6 +51,6 @@ class ConversionsGearRatios(Resource):
             odRatio = float(odRatio)
             transferCaseRatio = float(transferCaseRatio)
             axleRatio = float(axleRatio)
-            return gearRatios.vehicle_speed_at_engine_rpm(engineRpm, tireHeightInch, transmissionRatio, odRatio, transferCaseRatio, axleRatio)
+            return gear_ratios.vehicle_speed_at_engine_rpm(engineRpm, tireHeightInch, transmissionRatio, odRatio, transferCaseRatio, axleRatio)
         except ValueError:
             return "Can't convert {} to number".format(engineRpm, tireHeightInch, transmissionRatio, odRatio, transferCaseRatio, axleRatio), 400
