@@ -1,12 +1,27 @@
-FROM python:3.6-slim
-COPY . /app
-WORKDIR /app
-RUN apt-get clean \
-    && apt-get -y update
-RUN apt-get -y install nginx \
-    && apt-get -y install python3-dev \
-    && apt-get -y install build-essential
-RUN pip install -r requirements.txt
-COPY nginx.conf /etc/nginx
-RUN chmod +x ./start.sh
-CMD ["./start.sh"]
+FROM node:14-alpine
+
+# Set node environment to production
+ENV NODE_ENV production
+
+# Update the system
+RUN apk --no-cache -U upgrade
+
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to WORKDIR
+COPY package*.json ./
+
+# Switch to non-root user
+USER node
+
+# Install all dependencies
+RUN npm install --only=production
+
+# Copy the rest of the code
+COPY --chown=node:node . .
+
+# Open desired port
+EXPOSE 8080
+
+# Run the application
+CMD ["node", "app.js"]
