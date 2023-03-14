@@ -1,6 +1,4 @@
-'use strict'
-
-const apiBasePath = '/api/v2/GearRatios/'
+const apiBasePath = '/api/v2/GearRatios/';
 
 /**
  * Determine the new gear ratio needed when moving to a different tire size to keep the overall ratio the same
@@ -10,7 +8,7 @@ const apiBasePath = '/api/v2/GearRatios/'
  * @returns Rounded gear ratio
  */
 function newGearRatio(newTireDiamIn, oldTireDiamIn, axleRatio) {
-	return round((newTireDiamIn / oldTireDiamIn) * axleRatio, 2)
+  return round((newTireDiamIn / oldTireDiamIn) * axleRatio, 2);
 }
 
 /**
@@ -21,7 +19,7 @@ function newGearRatio(newTireDiamIn, oldTireDiamIn, axleRatio) {
  * @returns Rounded gear ratio
  */
 function effectiveGearRatio(newTireDiamIn, oldTireDiamIn, axleRatio) {
-	return round((oldTireDiamIn / newTireDiamIn) * axleRatio, 2)
+  return round((oldTireDiamIn / newTireDiamIn) * axleRatio, 2);
 }
 
 /**
@@ -33,11 +31,10 @@ function effectiveGearRatio(newTireDiamIn, oldTireDiamIn, axleRatio) {
  * @returns Rounded engine speed
  */
 function engineRpm(axleRatio, vehicleSpeedMph, transRatio, tireDiamIn) {
-
-	// 336.13 is used to convert the result to RPM
-	// [63360 inches per mile / (60 miles per hour * Pi)]
-	// http://www.crawlpedia.com/rpm_gear_calculator.htm
-	return round((axleRatio * vehicleSpeedMph * transRatio * 336.13) / tireDiamIn, 1)
+  // 336.13 is used to convert the result to RPM
+  // [63360 inches per mile / (60 miles per hour * Pi)]
+  // http://www.crawlpedia.com/rpm_gear_calculator.htm
+  return round((axleRatio * vehicleSpeedMph * transRatio * 336.13) / tireDiamIn, 1);
 }
 
 /**
@@ -51,11 +48,11 @@ function engineRpm(axleRatio, vehicleSpeedMph, transRatio, tireDiamIn) {
  * @returns Rounded vehicle speed
  */
 function vehicleSpeedAtEngineRpm(engineRpm, tireDiamIn, transRatio, auxRatio, tCaseRatio, axleRatio) {
-	// http://www.public.asu.edu/~grover/willys/speed.html
-	// https://wahiduddin.net/calc/calc_speed_rpm.htm
-	const tireDiam = tireDiamIn / 2
-	drivetrain_ratio = transRatio * auxRatio * tCaseRatio * axleRatio
-	return round(0.00595 * (engineRpm * tireDiam) / drivetrain_ratio, 2)
+  // http://www.public.asu.edu/~grover/willys/speed.html
+  // https://wahiduddin.net/calc/calc_speed_rpm.htm
+  const tireDiam = tireDiamIn / 2;
+  const drivetrainRatio = transRatio * auxRatio * tCaseRatio * axleRatio;
+  return round(0.00595 * (engineRpm * tireDiam) / drivetrainRatio, 2);
 }
 
 /**
@@ -73,20 +70,12 @@ function vehicleSpeedAtEngineRpm(engineRpm, tireDiamIn, transRatio, auxRatio, tC
  * @returns Rounded crawl ratio and short text description
  */
 function crawlRatio(axleRatio, lowTCaseRatio, transLowGearRatio, auxRatio) {
-	// https://www.offroadxtreme.com/news/off-road-101-what-is-crawl-ratio/
-	const cr = round(axleRatio * lowTCaseRatio * transLowGearRatio * auxRatio, 2)
-	if (cr < 50)
-		verbose = 'Factory style'
-	else if (cr >= 50 && cr < 80)
-		verbose = 'Backroads and trail use'
-	else if (cr >= 80 && cr < 110)
-		verbose = 'Intermediate trail use'
-	else if (cr >= 110 && cr < 135)
-		verbose = 'Ideal for crawling'
-	else
-		verbose = 'Excessive'
+  // https://www.offroadxtreme.com/news/off-road-101-what-is-crawl-ratio/
+  const cr = round(axleRatio * lowTCaseRatio * transLowGearRatio * auxRatio, 2);
+  let verbose;
+  if (cr < 50) { verbose = 'Factory style'; } else if (cr >= 50 && cr < 80) { verbose = 'Backroads and trail use'; } else if (cr >= 80 && cr < 110) { verbose = 'Intermediate trail use'; } else if (cr >= 110 && cr < 135) { verbose = 'Ideal for crawling'; } else { verbose = 'Excessive'; }
 
-	return cr, verbose
+  return cr, verbose;
 }
 
 /**
@@ -97,8 +86,8 @@ function crawlRatio(axleRatio, lowTCaseRatio, transLowGearRatio, auxRatio) {
  * @returns Rounded rotation velocity
  */
 function rotationVelocity(axleRatio, speedMph, tireDiamIn) {
-	// https://www.ajdesigner.com/phpgear/gear_equation_effective_gear_ratio.php
-	return round((168 * axleRatio * speedMph) / (tireDiamIn / 2), 4)
+  // https://www.ajdesigner.com/phpgear/gear_equation_effective_gear_ratio.php
+  return round((168 * axleRatio * speedMph) / (tireDiamIn / 2), 4);
 }
 
 /**
@@ -108,7 +97,7 @@ function rotationVelocity(axleRatio, speedMph, tireDiamIn) {
  * @returns Rounded axle ratio
  */
 function gearRatio(ringGearTeeth, pinionGearTeeth) {
-	return round(ringGearTeeth / pinionGearTeeth, 2)
+  return round(ringGearTeeth / pinionGearTeeth, 2);
 }
 
 /**
@@ -119,93 +108,84 @@ function gearRatio(ringGearTeeth, pinionGearTeeth) {
  * @returns Rounded vehicle speed
  */
 function actualSpeed(newTireDiamIn, oldTireDiamIn, speedoMph) {
-	return round((newTireDiamIn / oldTireDiamIn) * speedoMph, 2)
+  return round((newTireDiamIn / oldTireDiamIn) * speedoMph, 2);
 }
 
 export const gearRatiosRoutes = [
-{
-		method: 'GET',
-		path: apiBasePath + 'newGearRatio/{newTireDiamIn}/{oldTireDiamIn}/{axleRatio}',
-		handler: (request, h) => {
-			return newGearRatio(
-				request.params.newTireDiamIn,
-				request.params.oldTireDiamIn,
-				request.params.axleRatio)
-		}
-	},
-	{
-		method: 'GET',
-		path: apiBasePath + 'effectiveGearRatio/{newTireDiamIn}/{oldTireDiamIn}/{axleRatio}',
-		handler: (request, h) => {
-			return effectiveGearRatio(
-				request.params.newTireDiamIn,
-				request.params.oldTireDiamIn,
-				request.params.axleRatio)
-		}
-	},
-	{
-		method: 'GET',
-		path: apiBasePath + 'engineRpm/{axleRatio}/{vehicleSpeedMph}/{transRatio}/{tireDiamIn}',
-		handler: (request, h) => {
-			return engineRpm(
-				request.params.axleRatio,
-				request.params.vehicleSpeedMph,
-				request.params.transRatio,
-				request.params.tireDiamIn
-			)
-		}
-	},
-	{
-		method: 'GET',
-		path: apiBasePath + 'vehicleSpeedAtEngineRpm/{engineRpm}/{tireDiamIn}/{transRatio}/{auxRatio}/{tCaseRatio}/{axleRatio}',
-		handler: (request, h) => {
-			return vehicleSpeedAtEngineRpm(
-				request.params.engineRpm,
-				request.params.tireDiamIn,
-				request.params.transRatio,
-				request.params.auxRatio,
-				request.params.tCaseRatio,
-				request.params.axleRatio)
-		}
-	},
-	{
-		method: 'GET',
-		path: apiBasePath + 'crawlRatio/{axleRatio}/{lowTCaseRatio}/{transLowGearRatio}/{auxRatio}',
-		handler: (request, h) => {
-			return crawlRatio(
-				request.params.axleRatio,
-				request.params.lowTCaseRatio,
-				request.params.transLowGearRatio,
-				request.params.auxRatio)
-		}
-	},
-	{
-		method: 'GET',
-		path: apiBasePath + 'rotationVelocity/{axleRatio}/{speedMph}/{tireDiamIn}',
-		handler: (request, h) => {
-			return rotationVelocity(
-				request.params.axleRatio,
-				request.params.speedMph,
-				request.params.tireDiamIn)
-		}
-	},
-	{
-		method: 'GET',
-		path: apiBasePath + 'gearRatio/{ringGearTeeth}/{pinionGearTeeth}',
-		handler: (request, h) => {
-			return gearRatio(
-				request.params.ringGearTeeth,
-				request.params.pinionGearTeeth)
-		}
-	},
-	{
-		method: 'GET',
-		path: apiBasePath + 'actualSpeed/{newTireDiamIn}/{oldTireDiamIn}/{speedoMph}',
-		handler: (request, h) => {
-			return actualSpeed(
-				request.params.newTireDiamIn,
-				request.params.oldTireDiamIn,
-				request.params.speedoMph)
-		}
-	}
-]
+  {
+    method: 'GET',
+    path: `${apiBasePath}newGearRatio/{newTireDiamIn}/{oldTireDiamIn}/{axleRatio}`,
+    handler: (request) => newGearRatio(
+      request.params.newTireDiamIn,
+      request.params.oldTireDiamIn,
+      request.params.axleRatio
+    )
+  },
+  {
+    method: 'GET',
+    path: `${apiBasePath}effectiveGearRatio/{newTireDiamIn}/{oldTireDiamIn}/{axleRatio}`,
+    handler: (request) => effectiveGearRatio(
+      request.params.newTireDiamIn,
+      request.params.oldTireDiamIn,
+      request.params.axleRatio
+    )
+  },
+  {
+    method: 'GET',
+    path: `${apiBasePath}engineRpm/{axleRatio}/{vehicleSpeedMph}/{transRatio}/{tireDiamIn}`,
+    handler: (request) => engineRpm(
+      request.params.axleRatio,
+      request.params.vehicleSpeedMph,
+      request.params.transRatio,
+      request.params.tireDiamIn
+    )
+  },
+  {
+    method: 'GET',
+    path: `${apiBasePath}vehicleSpeedAtEngineRpm/{engineRpm}/{tireDiamIn}/{transRatio}/{auxRatio}/{tCaseRatio}/{axleRatio}`,
+    handler: (request) => vehicleSpeedAtEngineRpm(
+      request.params.engineRpm,
+      request.params.tireDiamIn,
+      request.params.transRatio,
+      request.params.auxRatio,
+      request.params.tCaseRatio,
+      request.params.axleRatio
+    )
+  },
+  {
+    method: 'GET',
+    path: `${apiBasePath}crawlRatio/{axleRatio}/{lowTCaseRatio}/{transLowGearRatio}/{auxRatio}`,
+    handler: (request) => crawlRatio(
+      request.params.axleRatio,
+      request.params.lowTCaseRatio,
+      request.params.transLowGearRatio,
+      request.params.auxRatio
+    )
+  },
+  {
+    method: 'GET',
+    path: `${apiBasePath}rotationVelocity/{axleRatio}/{speedMph}/{tireDiamIn}`,
+    handler: (request) => rotationVelocity(
+      request.params.axleRatio,
+      request.params.speedMph,
+      request.params.tireDiamIn
+    )
+  },
+  {
+    method: 'GET',
+    path: `${apiBasePath}gearRatio/{ringGearTeeth}/{pinionGearTeeth}`,
+    handler: (request) => gearRatio(
+      request.params.ringGearTeeth,
+      request.params.pinionGearTeeth
+    )
+  },
+  {
+    method: 'GET',
+    path: `${apiBasePath}actualSpeed/{newTireDiamIn}/{oldTireDiamIn}/{speedoMph}`,
+    handler: (request) => actualSpeed(
+      request.params.newTireDiamIn,
+      request.params.oldTireDiamIn,
+      request.params.speedoMph
+    )
+  }
+];
