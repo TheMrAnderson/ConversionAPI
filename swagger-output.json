@@ -1,0 +1,450 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "servers": [
+    {
+      "url": "http://localhost",
+      "description": "Local test server"
+    }
+  ],
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/AcreToFoot2/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/AcreToMile2/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/AcreToYard2/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Foot2ToAcre/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Foot2ToInch2/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Inch2ToFoot2/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Inch2ToYard2/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Mile2ToAcre/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Rod2ToYard2/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Yard2ToAcre/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/Yard2ToInch2/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/Yard2ToRod2/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/Circumference/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/FuelCostForRuntime/{numberHoursToRun}/{fuelPricePerUnit}/{burnRateUPH}": {
+      "get": {
+        "tags": [
+          "Rate"
+        ],
+        "description": "Calculate fuel cost for the desired runtime",
+        "parameters": [
+          {
+            "name": "numberHoursToRun",
+            "in": "path",
+            "required": true,
+            "type": "number",
+            "description": "Number of hours desired to run"
+          },
+          {
+            "name": "fuelPricePerUnit",
+            "in": "path",
+            "required": true,
+            "type": "number",
+            "description": "Price of fuel per unit whether gallon or liter, but the unit used here  is the same unit used in the burnRateUPH"
+          },
+          {
+            "name": "burnRateUPH",
+            "in": "path",
+            "required": true,
+            "type": "number",
+            "description": "Fuel burn rate in your preferred units per hour(gallons, liters, etc.)  as long as the units matches the fuelPricePerUnit"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/FuelTankRuntime/{burnRateUPH}/{fuelTankCapacity}": {
+      "get": {
+        "tags": [
+          "Rate"
+        ],
+        "description": "Calculate runtime for the fuel tank",
+        "parameters": [
+          {
+            "name": "burnRateUPH",
+            "in": "path",
+            "required": true,
+            "type": "number",
+            "description": "Fuel burn rate in your preferred units per hour(gallons, liters, etc.)  as long as the units matches the fuelTankCapacity"
+          },
+          {
+            "name": "fuelTankCapacity",
+            "in": "path",
+            "required": true,
+            "type": "number",
+            "description": "Fuel tank capacity in a unit matching the burnRateUPH"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/CelciusToFehrenheit/{input}": {
+      "get": {
+        "tags": [
+          "Temperature"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/FehrenheitToCelcius/{input}": {
+      "get": {
+        "tags": [
+          "Temperature"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "openapi": {
+      "type": "string",
+      "example": "3.0.0"
+    },
+    "info": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "ConversionAPI"
+        },
+        "version": {
+          "type": "string",
+          "example": "2.0.0"
+        },
+        "description": {
+          "type": "string",
+          "example": "An API to handle multiple conversions and calculations in one place"
+        }
+      }
+    }
+  },
+  "apis": [
+    "./src/controllers/v2/*.js"
+  ]
+}
