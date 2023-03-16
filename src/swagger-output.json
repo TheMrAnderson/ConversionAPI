@@ -1,0 +1,46 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "servers": [
+    {
+      "url": "http://localhost",
+      "description": "Local test server"
+    }
+  ],
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {},
+  "definitions": {
+    "openapi": {
+      "type": "string",
+      "example": "3.0.0"
+    },
+    "info": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "ConversionAPI"
+        },
+        "version": {
+          "type": "string",
+          "example": "2.0.0"
+        },
+        "description": {
+          "type": "string",
+          "example": "An API to handle multiple conversions and calculations in one place"
+        }
+      }
+    }
+  },
+  "apis": [
+    "./src/controllers/v2/*.js"
+  ]
+}

@@ -5,8 +5,8 @@
   "main": "app.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node swagger.js",
-    "swagger-autogen": "node swagger.js",
+    "start": "node ./src/swagger.js",
+    "swagger-autogen": "node ./src/swagger.js",
     "test": "jest",
     "lint": "eslint"
   },
