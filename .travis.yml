@@ -1,8 +1,0 @@
-language: python
-
-script:
-  # - python3 -m unittest discover
-  - nosetests --with-coverage # Add me to run nose with coverage support.
-
-after_success:
-  - coveralls

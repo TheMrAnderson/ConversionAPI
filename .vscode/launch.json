@@ -5,24 +5,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: Current File",
-      "type": "python",
+      "type": "node",
       "request": "launch",
-      "program": "${file}",
-      "console": "integratedTerminal"
-    },
-    {
-      "name": "ConversionAPI",
-      "type": "python",
-      "request": "launch",
-      "module": "flask",
-      "env": {
-        "FLASK_APP": "${workspaceFolder}/app.py",
-        "FLASK_ENV": "development",
-        "FLASK_DEBUG": "0"
-      },
-      "args": ["run", "--no-debugger", "--no-reload"],
-      "jinja": true
+      "name": "Run",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/swagger.js"
     }
   ]
 }
