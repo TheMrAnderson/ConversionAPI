@@ -14,13 +14,13 @@ COPY package*.json ./
 # Install all dependencies
 RUN npm install --only=production
 
-# Switch to non-root user
-USER node
-
 # Copy the rest of the code
 COPY --chown=node:node . .
 
 RUN touch /usr/src/app/swagger-output.json
+
+# Switch to non-root user
+USER node
 
 # Open desired port
 EXPOSE 3000
