@@ -1,4 +1,11 @@
 const swaggerAutogen = require('swagger-autogen')();
+const g = require('./global');
+const myip = require('quick-local-ip');
+
+g.Globals.port = process.env.PORT || 3000;
+
+// getting ip4 network address of local system
+g.Globals.ipAddress = myip.getLocalIP4();
 
 const doc = {
   definition: {
@@ -63,6 +70,12 @@ const doc = {
     }
   ],
   apis: ['./controllers/v2/*.js'],
+  servers: [
+    {
+      url: `http://${g.Globals.ipAddress}:${g.Globals.port}/`,
+    },
+  ],
+  host: `${g.Globals.ipAddress}:${g.Globals.port}`,
 };
 
 const outputFile = '../swagger-output.json';

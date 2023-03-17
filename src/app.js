@@ -2,14 +2,14 @@ const express = require('express');
 const morgan = require('morgan');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('../swagger-output.json');
+const g = require('./global');
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
-  res.send(`Welcome to ConversionAPI!  Documentation is on http://SERVERIP:${port}/swagger`);
+  res.send(`Welcome to ConversionAPI!  Documentation is on http://${g.Globals.ipAddress}:${g.Globals.port}/swagger`);
 });
 
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile));
@@ -27,6 +27,6 @@ require('./controllers/v2/temperature')(app);
 require('./controllers/v2/torque')(app);
 require('./controllers/v2/weight')(app);
 
-app.listen(port, () => {
-  console.log(`Running on port ${port}`);
+app.listen(g.Globals.port, () => {
+  console.log(`Running on port ${g.Globals.port}`);
 });
