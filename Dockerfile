@@ -11,11 +11,11 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json to WORKDIR
 COPY package*.json ./
 
-# Switch to non-root user
-USER node
-
 # Install all dependencies
 RUN npm install --only=production
+
+# Switch to non-root user
+USER node
 
 # Copy the rest of the code
 COPY --chown=node:node . .
@@ -24,4 +24,4 @@ COPY --chown=node:node . .
 EXPOSE 8080
 
 # Run the application
-CMD ["node", "app.js"]
+CMD ["node", "/usr/src/app/src/swagger.js"]
