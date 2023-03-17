@@ -21,7 +21,7 @@ USER node
 COPY --chown=node:node . .
 
 # Open desired port
-EXPOSE 8080
+EXPOSE 3000
 
 # Run the application
 CMD ["node", "/usr/src/app/src/swagger.js"]
