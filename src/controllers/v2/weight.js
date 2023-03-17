@@ -1,5 +1,6 @@
 module.exports = function (app) {
-  const caratToGram = (req, res) => {
+  app.get('/CaratToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -8,9 +9,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const grainToGram = (req, res) => {
+  app.get('/GrainToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -19,9 +21,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const grainToOunce = (req, res) => {
+  app.get('/GrainToOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -30,9 +33,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const grainToTroyPennyweight = (req, res) => {
+  app.get('/GrainToTroyPennyweight/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -41,9 +45,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const gramToGrain = (req, res) => {
+  app.get('/GramToGrain/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -52,9 +57,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const gramToOunce = (req, res) => {
+  app.get('/GramToOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -63,9 +69,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const gramToPound = (req, res) => {
+  app.get('/GramToPound/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -74,9 +81,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const kilogramToPound = (req, res) => {
+  app.get('/KilogramToPound/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -85,9 +93,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceToGrain = (req, res) => {
+  app.get('/OunceToGrain/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -96,9 +105,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceToGram = (req, res) => {
+  app.get('/OunceToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -107,9 +117,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceToTroyOunce = (req, res) => {
+  app.get('/OunceToTroyOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -118,9 +129,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const pointToCarat = (req, res) => {
+  app.get('/PointToCarat/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -129,9 +141,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const pointToGram = (req, res) => {
+  app.get('/PointToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -140,9 +153,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const poundToGram = (req, res) => {
+  app.get('/PoundToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -151,9 +165,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const poundToOunce = (req, res) => {
+  app.get('/PoundToOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -162,9 +177,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const poundToTroyPound = (req, res) => {
+  app.get('/PoundToTroyPound/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -173,9 +189,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const troyGrainToGrain = (req, res) => {
+  app.get('/TroyGrainToGrain/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -184,9 +201,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const troyPennyweightToGrain = (req, res) => {
+  app.get('/TroyPennyweightToGrain/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -195,9 +213,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const troyPennyweightToTroyOunce = (req, res) => {
+  app.get('/TroyPennyweightToTroyOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -206,9 +225,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const troyPoundToPound = (req, res) => {
+  app.get('/TroyPoundToPound/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -217,9 +237,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const troyPoundToTroyOunce = (req, res) => {
+  app.get('/TroyPoundToTroyOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
       res.json({
@@ -228,30 +249,5 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
-
-  // export controller consts
-  module.exports = {
-    caratToGram,
-    grainToGram,
-    grainToOunce,
-    grainToTroyPennyweight,
-    gramToGrain,
-    gramToOunce,
-    gramToPound,
-    kilogramToPound,
-    ounceToGrain,
-    ounceToGram,
-    ounceToTroyOunce,
-    pointToCarat,
-    pointToGram,
-    poundToGram,
-    poundToOunce,
-    poundToTroyPound,
-    troyGrainToGrain,
-    troyPennyweightToGrain,
-    troyPennyweightToTroyOunce,
-    troyPoundToPound,
-    troyPoundToTroyOunce
-  };
+  });
 };

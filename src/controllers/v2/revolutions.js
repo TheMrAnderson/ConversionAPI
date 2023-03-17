@@ -1,5 +1,6 @@
 module.exports = function (app) {
-  const revsPerMilePerMillimeter = (req, res) => {
+  app.get('/RevsPerMilePerMillimeter/:input', (req, res) => {
+    // #swagger.tags = ['Revolutions']
     try {
       // Convert a mile to mm, then gets revs per mile
       // Mile = 1609344 mm
@@ -10,9 +11,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const revsPerMilePerInch = (req, res) => {
+  app.get('/RevsPerMilePerInch/:input', (req, res) => {
+    // #swagger.tags = ['Revolutions']
     try {
       // Convert a mile to inches, then gets revs per mile
       // Mile = 63360 in
@@ -23,9 +25,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const revsPerKilometerPerMillimeter = (req, res) => {
+  app.get('/RevsPerKilometerPerMillimeter/:input', (req, res) => {
+    // #swagger.tags = ['Revolutions']
     try {
       // Convert a KM to MM, then get revs per KM
       // KM = 1, 000, 000 MM
@@ -36,9 +39,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const revsPerKilometerPerInch = (req, res) => {
+  app.get('/RevsPerKilometerPerInch/:input', (req, res) => {
+    // #swagger.tags = ['Revolutions']
     try {
       // Convert a KM to inches, then get revs per KM
       // KM = 39370.0787 Inches
@@ -49,13 +53,5 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
-
-  // export controller functions
-  module.exports = {
-    revsPerMilePerMillimeter,
-    revsPerMilePerInch,
-    revsPerKilometerPerMillimeter,
-    revsPerKilometerPerInch
-  };
+  });
 };

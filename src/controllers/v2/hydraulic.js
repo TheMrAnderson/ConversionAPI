@@ -1,5 +1,6 @@
 module.exports = function (app) {
-  const fluidHp = (req, res) => {
+  app.get('/FluidHP/:pressurePsi/:pumpFlowGpm', (req, res) => {
+    // #swagger.tags = ['Hydraulic']
     try {
       const { pressurePsi } = req.params;
       const { pumpFlowGpm } = req.params;
@@ -10,9 +11,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const motorTorqueInLbs = (req, res) => {
+  app.get('/MotorTorqueToInLbs/:pressurePsi/:motorDisplacementCuInPerRev', (req, res) => {
+    // #swagger.tags = ['Hydraulic']
     try {
       const { pressurePsi } = req.params;
       const { motorDisplacementCuInPerRev } = req.params;
@@ -23,9 +25,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const motorHp = (req, res) => {
+  app.get('/MotorHP/:torqueInLbs/:motorRpm', (req, res) => {
+    // #swagger.tags = ['Hydraulic']
     try {
       const { torqueInLbs } = req.params;
       const { motorRpm } = req.params;
@@ -36,9 +39,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const motorRpm = (req, res) => {
+  app.get('/MotorRPM/:pumpFlowGpm/:motorDisplacementCuInPerRev', (req, res) => {
+    // #swagger.tags = ['Hydraulic']
     try {
       const { pumpFlowGpm } = req.params;
       const { motorDisplacementCuInPerRev } = req.params;
@@ -49,13 +53,5 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
-
-  // export controller functions
-  module.exports = {
-    fluidHp,
-    motorTorqueInLbs,
-    motorHp,
-    motorRpm
-  };
+  });
 };

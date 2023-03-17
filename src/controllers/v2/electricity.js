@@ -1,10 +1,70 @@
-module.exports = function (app) {
-  function batteryRuntimeHours(loadWattage, batteryAh) {
-    const ampLoad = loadWattage / 12;
-    return batteryAh / ampLoad / 2;
-  }
+function batteryRuntimeHours(loadWattage, batteryAh) {
+  const ampLoad = loadWattage / 12;
+  return batteryAh / ampLoad / 2;
+}
 
-  const getBatteryRuntimeHours = (req, res) => {
+/**
+   * Handle the parsing of optional parameters
+   * @param {*} options request.params
+   * @param {*} name name of the parameter
+   * @param {*} def default value
+   * @returns
+   */
+function opt(options, name, def) {
+  return options && options[name] !== undefined ? options[name] : def;
+}
+
+function getOhmsVoltAmp(volts, amps) {
+  return volts / amps;
+}
+
+function getOhmsWattAmp(watts, amps) {
+  return watts / (amps * amps);
+}
+
+function getOhmsVoltWatt(volts, watts) {
+  return ((volts * volts) / watts);
+}
+
+function getAmpsVoltOhm(volts, ohms) {
+  return volts / ohms;
+}
+
+function getAmpsWattVolt(watts, volts) {
+  return watts / volts;
+}
+
+function getAmpsWattOhm(watts, ohms) {
+  return Math.sqrt((watts / ohms));
+}
+
+function getVoltsAmpOhm(amps, ohms) {
+  return amps * ohms;
+}
+
+function getVoltsWattAmp(watts, amps) {
+  return watts / amps;
+}
+
+function getVoltsWattOhm(watts, ohms) {
+  return Math.sqrt((watts * ohms));
+}
+
+function getWattsVoltAmp(volts, amps) {
+  return volts * amps;
+}
+
+function getWattsVoltOhm(volts, ohms) {
+  return (volts * volts) / ohms;
+}
+
+function getWattsAmpOhm(amps, ohms) {
+  return (amps * amps) / ohms;
+}
+
+module.exports = function (app) {
+  app.get('/BatteryRuntimeHours/:loadWattage/:batteryAh', (req, res) => {
+    // #swagger.tags = ['Electricity']
     try {
       const { loadWattage } = req.params;
       const { batteryAh } = req.params;
@@ -12,9 +72,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const getBatteryRuntimeMinutes = (req, res) => {
+  app.get('/BatteryRuntimeMinutes/:loadWattage/:batteryAh', (req, res) => {
+    // #swagger.tags = ['Electricity']
     try {
       const { loadWattage } = req.params;
       const { batteryAh } = req.params;
@@ -22,68 +83,26 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  /**
-   * Handle the parsing of optional parameters
-   * @param {*} options request.params
-   * @param {*} name name of the parameter
-   * @param {*} def default value
-   * @returns
-   */
-  function opt(options, name, def) {
-    return options && options[name] !== undefined ? options[name] : def;
-  }
-
-  function getOhmsVoltAmp(volts, amps) {
-    return volts / amps;
-  }
-
-  function getOhmsWattAmp(watts, amps) {
-    return watts / (amps * amps);
-  }
-
-  function getOhmsVoltWatt(volts, watts) {
-    return ((volts * volts) / watts);
-  }
-
-  function getAmpsVoltOhm(volts, ohms) {
-    return volts / ohms;
-  }
-
-  function getAmpsWattVolt(watts, volts) {
-    return watts / volts;
-  }
-
-  function getAmpsWattOhm(watts, ohms) {
-    return Math.sqrt((watts / ohms));
-  }
-
-  function getVoltsAmpOhm(amps, ohms) {
-    return amps * ohms;
-  }
-
-  function getVoltsWattAmp(watts, amps) {
-    return watts / amps;
-  }
-
-  function getVoltsWattOhm(watts, ohms) {
-    return Math.sqrt((watts * ohms));
-  }
-
-  function getWattsVoltAmp(volts, amps) {
-    return volts * amps;
-  }
-
-  function getWattsVoltOhm(volts, ohms) {
-    return (volts * volts) / ohms;
-  }
-
-  function getWattsAmpOhm(amps, ohms) {
-    return (amps * amps) / ohms;
-  }
-
-  const getOhms = (req, res) => {
+  app.get('/Ohms', (req, res) => {
+    // #swagger.tags = ['Electricity']
+    // #swagger.description = 'Get ohms by supplying any 2 of the parameters'
+    /* #swagger.parameters['volts'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
+    /* #swagger.parameters['watts'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
+    /* #swagger.parameters['amps'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
     try {
       if (Object.keys(req.query).length !== 2) {
         res.status(400).json({ error: 'Must supply exactly 2 parameters' });
@@ -116,9 +135,26 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const getAmps = (req, res) => {
+  app.get('/Amps', (req, res) => {
+    // #swagger.tags = ['Electricity']
+    // #swagger.description = 'Get amps by supplying any 2 of the parameters'
+    /* #swagger.parameters['volts'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
+    /* #swagger.parameters['watts'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
+    /* #swagger.parameters['ohms'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
     try {
       if (Object.keys(req.query).length !== 2) {
         res.status(400).json({ error: 'Must supply exactly 2 parameters' });
@@ -151,9 +187,26 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const getVolts = (req, res) => {
+  app.get('/Volts', (req, res) => {
+    // #swagger.tags = ['Electricity']
+    // #swagger.description = 'Get volts by supplying any 2 of the parameters'
+    /* #swagger.parameters['amps'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
+    /* #swagger.parameters['watts'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
+    /* #swagger.parameters['ohms'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
     try {
       if (Object.keys(req.query).length !== 2) {
         res.status(400).json({ error: 'Must supply exactly 2 parameters' });
@@ -186,9 +239,26 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const getWatts = (req, res) => {
+  app.get('/Watts', (req, res) => {
+    // #swagger.tags = ['Electricity']
+    // #swagger.description = 'Get watts by supplying any 2 of the parameters'
+    /* #swagger.parameters['volts'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
+    /* #swagger.parameters['ohms'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
+    /* #swagger.parameters['amps'] = {
+        in: 'query',
+        required: 'false',
+        type: 'number'
+    } */
     try {
       if (Object.keys(req.query).length !== 2) {
         res.status(400).json({ error: 'Must supply exactly 2 parameters' });
@@ -221,5 +291,5 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 };

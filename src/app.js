@@ -1,5 +1,4 @@
 const express = require('express');
-// const swaggerJsDoc = require('swagger-jsdoc');
 const morgan = require('morgan');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('../swagger-output.json');
@@ -21,7 +20,6 @@ require('./controllers/v2/electricity')(app);
 require('./controllers/v2/gearing')(app);
 require('./controllers/v2/hydraulic')(app);
 require('./controllers/v2/length')(app);
-// require('./controllers/v2/pulley')(app);
 require('./controllers/v2/rate')(app);
 require('./controllers/v2/revolutions')(app);
 require('./controllers/v2/speed')(app);

@@ -1,5 +1,6 @@
 module.exports = function (app) {
-  const gramCentimeterToDyneCentimeter = (req, res) => {
+  app.get('/GramCentimeterToDyneCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -8,9 +9,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const gramCentimeterToKilogramMeter = (req, res) => {
+  app.get('/GramCentimeterToKilogramMeter/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -19,9 +21,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const gramCentimeterToNewtonMeter = (req, res) => {
+  app.get('/GramCentimeterToNewtonMeter/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -30,9 +33,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const gramCentimeterToOunceInch = (req, res) => {
+  app.get('/GramCentimeterToOunceInch/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -41,9 +45,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const gramCentimeterToPoundFoot = (req, res) => {
+  app.get('/GramCentimeterToPoundFoot/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -52,9 +57,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const milliNewtonMeterToOunceInch = (req, res) => {
+  app.get('/MilliNewtonMeterToOunceInch/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -63,9 +69,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const newtonCentimeterToOunceInch = (req, res) => {
+  app.get('/NewtonCentimeterToOunceInch/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -74,9 +81,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const newtonMeterToOunceInch = (req, res) => {
+  app.get('/NewtonMeterToOunceInch/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -85,9 +93,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceInchToDyneCentimeter = (req, res) => {
+  app.get('/OunceInchToDyneCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -96,9 +105,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceInchToKilogramMeter = (req, res) => {
+  app.get('/OunceInchToKilogramMeter/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -107,9 +117,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceInchToMilliNewtonMeter = (req, res) => {
+  app.get('/OunceInchToMilliNewtonMeter/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -118,9 +129,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceInchToNewtonCentimeter = (req, res) => {
+  app.get('/OunceInchToNewtonCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -129,9 +141,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceInchToNewtonMeter = (req, res) => {
+  app.get('/OunceInchToNewtonMeter/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -140,9 +153,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceInchToPoundFoot = (req, res) => {
+  app.get('/OunceInchToPoundFoot/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -151,9 +165,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const ounceInchToPoundInch = (req, res) => {
+  app.get('/OunceInchToPoundInch/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -162,9 +177,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const newtonMeterToPoundFoot = (req, res) => {
+  app.get('/NewtonMeterToPoundFoot/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -173,9 +189,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const poundFootToNewtonMeter = (req, res) => {
+  app.get('/PoundFootToNewtonMeter/:input', (req, res) => {
+    // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
       res.json({
@@ -184,26 +201,5 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
-
-  // export controller consts
-  module.exports = {
-    gramCentimeterToDyneCentimeter,
-    gramCentimeterToKilogramMeter,
-    gramCentimeterToNewtonMeter,
-    gramCentimeterToOunceInch,
-    gramCentimeterToPoundFoot,
-    milliNewtonMeterToOunceInch,
-    newtonCentimeterToOunceInch,
-    newtonMeterToOunceInch,
-    ounceInchToDyneCentimeter,
-    ounceInchToKilogramMeter,
-    ounceInchToMilliNewtonMeter,
-    ounceInchToNewtonCentimeter,
-    ounceInchToNewtonMeter,
-    ounceInchToPoundFoot,
-    ounceInchToPoundInch,
-    newtonMeterToPoundFoot,
-    poundFootToNewtonMeter
-  };
+  });
 };

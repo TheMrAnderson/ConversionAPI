@@ -1,5 +1,6 @@
 module.exports = function (app) {
-  const mphToKnots = (req, res) => {
+  app.get('/MphToKnots/:input', (req, res) => {
+    // #swagger.tags = ['Speed']
     try {
       const { input } = req.params;
       res.json({
@@ -8,9 +9,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const knotsToMph = (req, res) => {
+  app.get('/KnotsToMph/:input', (req, res) => {
+    // #swagger.tags = ['Speed']
     try {
       const { input } = req.params;
       res.json({
@@ -19,9 +21,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const knotsToMach = (req, res) => {
+  app.get('/KnotsToMach/:input', (req, res) => {
+    // #swagger.tags = ['Speed']
     try {
       const { input } = req.params;
       res.json({
@@ -30,9 +33,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const mphToMach = (req, res) => {
+  app.get('/MphToMach/:input', (req, res) => {
+    // #swagger.tags = ['Speed']
     try {
       const { input } = req.params;
       res.json({
@@ -41,13 +45,5 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
-
-  // export controller functions
-  module.exports = {
-    mphToKnots,
-    knotsToMph,
-    knotsToMach,
-    mphToMach
-  };
+  });
 };

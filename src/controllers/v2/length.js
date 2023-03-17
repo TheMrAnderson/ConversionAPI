@@ -1,5 +1,6 @@
 module.exports = function (app) {
-  const millimeterToInch = (req, res) => {
+  app.get('/MillimeterToInch/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -8,9 +9,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const centimeterToInch = (req, res) => {
+  app.get('/CentimeterToInch/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -19,9 +21,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const footToMillimeter = (req, res) => {
+  app.get('/FootToMillimeter/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -30,9 +33,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const inchToCentimeter = (req, res) => {
+  app.get('/InchToCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -41,9 +45,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const inchToMiliimeter = (req, res) => {
+  app.get('/InchToMillimeter/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -52,9 +57,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const kilometerToMile = (req, res) => {
+  app.get('/KilometerToMile/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -63,9 +69,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const meterToFoot = (req, res) => {
+  app.get('/MeterToFoot/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -74,9 +81,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const meterToInch = (req, res) => {
+  app.get('/MeterToInch/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -85,9 +93,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const mileToKilometer = (req, res) => {
+  app.get('/MileToKilometer/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -96,9 +105,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const micrometerToInch = (req, res) => {
+  app.get('/MicrometerToInch/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -107,9 +117,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const yardToMillimeter = (req, res) => {
+  app.get('/YardToMillimeter/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -118,9 +129,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const rackUToInch = (req, res) => {
+  app.get('/RackUToInch/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -129,9 +141,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const inchToRackU = (req, res) => {
+  app.get('/InchToRackU/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -140,9 +153,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const inchToHand = (req, res) => {
+  app.get('/InchToHand/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -151,9 +165,10 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
+  });
 
-  const handToInch = (req, res) => {
+  app.get('/HandToInch/:input', (req, res) => {
+    // #swagger.tags = ['Length']
     try {
       const { input } = req.params;
       res.json({
@@ -162,24 +177,5 @@ module.exports = function (app) {
     } catch (e) {
       res.status(500).json(e);
     }
-  };
-
-  // export controller functions
-  module.exports = {
-    millimeterToInch,
-    centimeterToInch,
-    footToMillimeter,
-    inchToCentimeter,
-    inchToMiliimeter,
-    kilometerToMile,
-    meterToFoot,
-    meterToInch,
-    mileToKilometer,
-    micrometerToInch,
-    yardToMillimeter,
-    rackUToInch,
-    inchToRackU,
-    inchToHand,
-    handToInch
-  };
+  });
 };
