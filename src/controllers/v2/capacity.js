@@ -1,5 +1,5 @@
 module.exports = function (app) {
-  app.get('/BushelToCubicInch/:input', (req, res) => {
+  app.get('/Capacity/BushelToCubicInch/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -11,7 +11,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/BushelToLiter/:input', (req, res) => {
+  app.get('/Capacity/BushelToLiter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -23,7 +23,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/BushelToPeck/:input', (req, res) => {
+  app.get('/Capacity/BushelToPeck/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -35,7 +35,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CubicCentimetertoCubicInch/:input', (req, res) => {
+  app.get('/Capacity/CubicCentimetertoCubicInch/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -47,7 +47,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CubicDecimeterToCubicInch/:input', (req, res) => {
+  app.get('/Capacity/CubicDecimeterToCubicInch/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -59,7 +59,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CubicFootToCubicMeter/:input', (req, res) => {
+  app.get('/Capacity/CubicFootToCubicMeter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -71,7 +71,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CubicInchToCubicMeter/:input', (req, res) => {
+  app.get('/Capacity/CubicInchToCubicMeter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -83,7 +83,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CubicInchToCubicDecimeter/:input', (req, res) => {
+  app.get('/Capacity/CubicInchToCubicDecimeter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -95,7 +95,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CubicInchToUsGallon/:input', (req, res) => {
+  app.get('/Capacity/CubicInchToUsGallon/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -107,7 +107,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CubicMeterToCubicYard/:input', (req, res) => {
+  app.get('/Capacity/CubicMeterToCubicYard/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -119,7 +119,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CubicYardToCubicMeter/:input', (req, res) => {
+  app.get('/Capacity/CubicYardToCubicMeter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -131,7 +131,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CupToOunce/:input', (req, res) => {
+  app.get('/Capacity/CupToOunce/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -143,7 +143,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/UsGallonToCubicInch/:input', (req, res) => {
+  app.get('/Capacity/UsGallonToCubicInch/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -155,7 +155,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/UsGallonToLiter/:input', (req, res) => {
+  app.get('/Capacity/UsGallonToLiter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -167,7 +167,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/UsGallonToOunce/:input', (req, res) => {
+  app.get('/Capacity/UsGallonToOunce/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -179,7 +179,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/LiterToCubicInch/:input', (req, res) => {
+  app.get('/Capacity/LiterToCubicInch/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -191,7 +191,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/LiterToUsGallon/:input', (req, res) => {
+  app.get('/Capacity/LiterToUsGallon/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -203,7 +203,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/LiterToUsDryQuart/:input', (req, res) => {
+  app.get('/Capacity/LiterToUsDryQuart/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -215,7 +215,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/LiterToUsLiquidQuart/:input', (req, res) => {
+  app.get('/Capacity/LiterToUsLiquidQuart/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -227,7 +227,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/MilliliterToOunce/:input', (req, res) => {
+  app.get('/Capacity/MilliliterToOunce/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -239,7 +239,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToCubicCentimeter/:input', (req, res) => {
+  app.get('/Capacity/OunceToCubicCentimeter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -251,7 +251,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToCubicInch/:input', (req, res) => {
+  app.get('/Capacity/OunceToCubicInch/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -263,7 +263,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToCup/:input', (req, res) => {
+  app.get('/Capacity/OunceToCup/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -275,7 +275,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToMilliliter/:input', (req, res) => {
+  app.get('/Capacity/OunceToMilliliter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -287,7 +287,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToUsGallon/:input', (req, res) => {
+  app.get('/Capacity/OunceToUsGallon/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -299,7 +299,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToPint/:input', (req, res) => {
+  app.get('/Capacity/OunceToPint/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -311,7 +311,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToQuart/:input', (req, res) => {
+  app.get('/Capacity/OunceToQuart/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -323,7 +323,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToTablespoon/:input', (req, res) => {
+  app.get('/Capacity/OunceToTablespoon/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -335,7 +335,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToTeaspoon/:input', (req, res) => {
+  app.get('/Capacity/OunceToTeaspoon/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -347,7 +347,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/TeaspoonToTablespoon/:input', (req, res) => {
+  app.get('/Capacity/TeaspoonToTablespoon/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -359,7 +359,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/TablespoonToTeaspoon/:input', (req, res) => {
+  app.get('/Capacity/TablespoonToTeaspoon/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -371,7 +371,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/TablespoonToOunce/:input', (req, res) => {
+  app.get('/Capacity/TablespoonToOunce/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -383,7 +383,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/TeaspoonToOunce/:input', (req, res) => {
+  app.get('/Capacity/TeaspoonToOunce/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -395,7 +395,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PeckToLiter/:input', (req, res) => {
+  app.get('/Capacity/PeckToLiter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -407,7 +407,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PeckToUsDryQuart/:input', (req, res) => {
+  app.get('/Capacity/PeckToUsDryQuart/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -419,7 +419,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PintToCubicCentimeter/:input', (req, res) => {
+  app.get('/Capacity/PintToCubicCentimeter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -431,7 +431,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PintToCubicFoot/:input', (req, res) => {
+  app.get('/Capacity/PintToCubicFoot/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -443,7 +443,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PintToCubicInch/:input', (req, res) => {
+  app.get('/Capacity/PintToCubicInch/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -455,7 +455,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PintToOunce/:input', (req, res) => {
+  app.get('/Capacity/PintToOunce/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -467,7 +467,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/UsQuartToCubicInch/:input', (req, res) => {
+  app.get('/Capacity/UsQuartToCubicInch/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -479,7 +479,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/UsQuartToLiter/:input', (req, res) => {
+  app.get('/Capacity/UsQuartToLiter/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;
@@ -491,7 +491,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/UsQuartToOunce/:input', (req, res) => {
+  app.get('/Capacity/UsQuartToOunce/:input', (req, res) => {
     // #swagger.tags = ['Capacity']
     try {
       const { input } = req.params;

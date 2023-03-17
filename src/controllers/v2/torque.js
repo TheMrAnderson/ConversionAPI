@@ -1,5 +1,5 @@
 module.exports = function (app) {
-  app.get('/GramCentimeterToDyneCentimeter/:input', (req, res) => {
+  app.get('/Torque/GramCentimeterToDyneCentimeter/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -11,7 +11,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GramCentimeterToKilogramMeter/:input', (req, res) => {
+  app.get('/Torque/GramCentimeterToKilogramMeter/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -23,7 +23,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GramCentimeterToNewtonMeter/:input', (req, res) => {
+  app.get('/Torque/GramCentimeterToNewtonMeter/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -35,7 +35,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GramCentimeterToOunceInch/:input', (req, res) => {
+  app.get('/Torque/GramCentimeterToOunceInch/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -47,7 +47,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GramCentimeterToPoundFoot/:input', (req, res) => {
+  app.get('/Torque/GramCentimeterToPoundFoot/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -59,7 +59,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/MilliNewtonMeterToOunceInch/:input', (req, res) => {
+  app.get('/Torque/MilliNewtonMeterToOunceInch/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -71,7 +71,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/NewtonCentimeterToOunceInch/:input', (req, res) => {
+  app.get('/Torque/NewtonCentimeterToOunceInch/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -83,7 +83,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/NewtonMeterToOunceInch/:input', (req, res) => {
+  app.get('/Torque/NewtonMeterToOunceInch/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -95,7 +95,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceInchToDyneCentimeter/:input', (req, res) => {
+  app.get('/Torque/OunceInchToDyneCentimeter/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -107,7 +107,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceInchToKilogramMeter/:input', (req, res) => {
+  app.get('/Torque/OunceInchToKilogramMeter/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -119,7 +119,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceInchToMilliNewtonMeter/:input', (req, res) => {
+  app.get('/Torque/OunceInchToMilliNewtonMeter/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -131,7 +131,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceInchToNewtonCentimeter/:input', (req, res) => {
+  app.get('/Torque/OunceInchToNewtonCentimeter/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -143,7 +143,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceInchToNewtonMeter/:input', (req, res) => {
+  app.get('/Torque/OunceInchToNewtonMeter/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -155,7 +155,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceInchToPoundFoot/:input', (req, res) => {
+  app.get('/Torque/OunceInchToPoundFoot/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -167,7 +167,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceInchToPoundInch/:input', (req, res) => {
+  app.get('/Torque/OunceInchToPoundInch/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -179,7 +179,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/NewtonMeterToPoundFoot/:input', (req, res) => {
+  app.get('/Torque/NewtonMeterToPoundFoot/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;
@@ -191,7 +191,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PoundFootToNewtonMeter/:input', (req, res) => {
+  app.get('/Torque/PoundFootToNewtonMeter/:input', (req, res) => {
     // #swagger.tags = ['Torque']
     try {
       const { input } = req.params;

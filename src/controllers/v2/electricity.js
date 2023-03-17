@@ -63,7 +63,7 @@ function getWattsAmpOhm(amps, ohms) {
 }
 
 module.exports = function (app) {
-  app.get('/BatteryRuntimeHours/:loadWattage/:batteryAh', (req, res) => {
+  app.get('/Electricity/BatteryRuntimeHours/:loadWattage/:batteryAh', (req, res) => {
     // #swagger.tags = ['Electricity']
     try {
       const { loadWattage } = req.params;
@@ -74,7 +74,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/BatteryRuntimeMinutes/:loadWattage/:batteryAh', (req, res) => {
+  app.get('/Electricity/BatteryRuntimeMinutes/:loadWattage/:batteryAh', (req, res) => {
     // #swagger.tags = ['Electricity']
     try {
       const { loadWattage } = req.params;
@@ -85,7 +85,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Ohms', (req, res) => {
+  app.get('/Electricity/Ohms', (req, res) => {
     // #swagger.tags = ['Electricity']
     // #swagger.description = 'Get ohms by supplying any 2 of the parameters'
     /* #swagger.parameters['volts'] = {
@@ -137,7 +137,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Amps', (req, res) => {
+  app.get('/Electricity/Amps', (req, res) => {
     // #swagger.tags = ['Electricity']
     // #swagger.description = 'Get amps by supplying any 2 of the parameters'
     /* #swagger.parameters['volts'] = {
@@ -189,7 +189,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Volts', (req, res) => {
+  app.get('/Electricity/Volts', (req, res) => {
     // #swagger.tags = ['Electricity']
     // #swagger.description = 'Get volts by supplying any 2 of the parameters'
     /* #swagger.parameters['amps'] = {
@@ -241,7 +241,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Watts', (req, res) => {
+  app.get('/Electricity/Watts', (req, res) => {
     // #swagger.tags = ['Electricity']
     // #swagger.description = 'Get watts by supplying any 2 of the parameters'
     /* #swagger.parameters['volts'] = {

@@ -1,5 +1,5 @@
 module.exports = function (app) {
-  app.get('/AcreToFoot2/:input', (req, res) => {
+  app.get('/Area/AcreToFoot2/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -11,7 +11,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/AcreToMile2/:input', (req, res) => {
+  app.get('/Area/AcreToMile2/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -23,7 +23,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/AcreToYard2/:input', (req, res) => {
+  app.get('/Area/AcreToYard2/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -35,7 +35,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Foot2ToAcre/:input', (req, res) => {
+  app.get('/Area/Foot2ToAcre/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -47,7 +47,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Foot2ToInch2/:input', (req, res) => {
+  app.get('/Area/Foot2ToInch2/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -59,7 +59,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Inch2ToFoot2/:input', (req, res) => {
+  app.get('/Area/Inch2ToFoot2/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -71,7 +71,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Inch2ToYard2/:input', (req, res) => {
+  app.get('/Area/Inch2ToYard2/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -83,7 +83,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Mile2ToAcre/:input', (req, res) => {
+  app.get('/Area/Mile2ToAcre/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -95,7 +95,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Rod2ToYard2/:input', (req, res) => {
+  app.get('/Area/Rod2ToYard2/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -107,7 +107,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Yard2ToAcre/:input', (res, req) => {
+  app.get('/Area/Yard2ToAcre/:input', (res, req) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -119,7 +119,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Yard2ToInch2/:input', (res, req) => {
+  app.get('/Area/Yard2ToInch2/:input', (res, req) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -131,7 +131,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Yard2ToRod2/:input', (res, req) => {
+  app.get('/Area/Yard2ToRod2/:input', (res, req) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -143,7 +143,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Circumference/:input', (res, req) => {
+  app.get('/Area/Circumference/:input', (res, req) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;

@@ -1,5 +1,5 @@
 module.exports = function (app) {
-  app.get('/CaratToGram/:input', (req, res) => {
+  app.get('/Weight/CaratToGram/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -11,7 +11,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GrainToGram/:input', (req, res) => {
+  app.get('/Weight/GrainToGram/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -23,7 +23,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GrainToOunce/:input', (req, res) => {
+  app.get('/Weight/GrainToOunce/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -35,7 +35,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GrainToTroyPennyweight/:input', (req, res) => {
+  app.get('/Weight/GrainToTroyPennyweight/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -47,7 +47,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GramToGrain/:input', (req, res) => {
+  app.get('/Weight/GramToGrain/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -59,7 +59,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GramToOunce/:input', (req, res) => {
+  app.get('/Weight/GramToOunce/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -71,7 +71,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/GramToPound/:input', (req, res) => {
+  app.get('/Weight/GramToPound/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -83,7 +83,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/KilogramToPound/:input', (req, res) => {
+  app.get('/Weight/KilogramToPound/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -95,7 +95,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToGrain/:input', (req, res) => {
+  app.get('/Weight/OunceToGrain/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -107,7 +107,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToGram/:input', (req, res) => {
+  app.get('/Weight/OunceToGram/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -119,7 +119,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/OunceToTroyOunce/:input', (req, res) => {
+  app.get('/Weight/OunceToTroyOunce/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -131,7 +131,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PointToCarat/:input', (req, res) => {
+  app.get('/Weight/PointToCarat/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -143,7 +143,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PointToGram/:input', (req, res) => {
+  app.get('/Weight/PointToGram/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -155,7 +155,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PoundToGram/:input', (req, res) => {
+  app.get('/Weight/PoundToGram/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -167,7 +167,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PoundToOunce/:input', (req, res) => {
+  app.get('/Weight/PoundToOunce/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -179,7 +179,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/PoundToTroyPound/:input', (req, res) => {
+  app.get('/Weight/PoundToTroyPound/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -191,7 +191,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/TroyGrainToGrain/:input', (req, res) => {
+  app.get('/Weight/TroyGrainToGrain/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -203,7 +203,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/TroyPennyweightToGrain/:input', (req, res) => {
+  app.get('/Weight/TroyPennyweightToGrain/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -215,7 +215,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/TroyPennyweightToTroyOunce/:input', (req, res) => {
+  app.get('/Weight/TroyPennyweightToTroyOunce/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -227,7 +227,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/TroyPoundToPound/:input', (req, res) => {
+  app.get('/Weight/TroyPoundToPound/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;
@@ -239,7 +239,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/TroyPoundToTroyOunce/:input', (req, res) => {
+  app.get('/Weight/TroyPoundToTroyOunce/:input', (req, res) => {
     // #swagger.tags = ['Weight']
     try {
       const { input } = req.params;

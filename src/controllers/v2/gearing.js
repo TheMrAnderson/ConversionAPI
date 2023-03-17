@@ -7,7 +7,7 @@ function effectiveGearRatio(newTireDiamIn, oldTireDiamIn, axleRatio) {
 }
 
 module.exports = function (app) {
-  app.get('/NewGearRatioNeeded/:newTireDiamIn/:oldTireDiamIn/:axleRatio', (req, res) => {
+  app.get('/Gearing/NewGearRatioNeeded/:newTireDiamIn/:oldTireDiamIn/:axleRatio', (req, res) => {
     // #swagger.tags = ['Gearing']
     /* #swagger.description = 'Determine the new gear ratio needed when moving to a different
         tire size to keep the overall ratio the same.Also provides the effective gear
@@ -45,7 +45,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/EngineRpmAtSpeed/:axleRatio/:vehicleSpeedMph/:transRatio/:tireDiamIn', (req, res) => {
+  app.get('/Gearing/EngineRpmAtSpeed/:axleRatio/:vehicleSpeedMph/:transRatio/:tireDiamIn', (req, res) => {
     // #swagger.tags = ['Gearing']
     /* #swagger.description = 'Determine the engine RPM at a given speed for the combination of the
         axle ratio, transmission gear and tire diameter' */
@@ -90,7 +90,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/VehicleSpeedAtEngineRpm/:engineRpm/:tireDiamIn/:transRatio/:auxRatio/:tCaseRatio/:axleRatio', (req, res) => {
+  app.get('/Gearing/VehicleSpeedAtEngineRpm/:engineRpm/:tireDiamIn/:transRatio/:auxRatio/:tCaseRatio/:axleRatio', (req, res) => {
     // #swagger.tags = ['Gearing']
     /* #swagger.description = 'Determine the vehicle speed at a given engine RPM for the
         combination of the tire diameter, transmission gear,
@@ -153,7 +153,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CrawlRatio/:axleRatio/:lowTCaseRatio/:transLowGearRatio/:auxRatio', (req, res) => {
+  app.get('/Gearing/CrawlRatio/:axleRatio/:lowTCaseRatio/:transLowGearRatio/:auxRatio', (req, res) => {
     // #swagger.tags = ['Gearing']
     /* #swagger.description = 'Determine the crawl ratio for the provided parameters' */
     /* #swagger.parameters['axleRatio'] = {
@@ -216,7 +216,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/RotationVelocity/:axleRatio/:speedMph/:tireDiamIn', (req, res) => {
+  app.get('/Gearing/RotationVelocity/:axleRatio/:speedMph/:tireDiamIn', (req, res) => {
     // #swagger.tags = ['Gearing']
     /* #swagger.description = 'Determine the rotation velocity which is how fast
         an object rotates or revolves relative to another point' */
@@ -252,7 +252,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/CalculateGearRatio/:ringGearTeeth/:pinionGearTeeth', (req, res) => {
+  app.get('/Gearing/CalculateGearRatio/:ringGearTeeth/:pinionGearTeeth', (req, res) => {
     // #swagger.tags = ['Gearing']
     // #swagger.description = 'Determine the gear ratio by counting teeth on the ring and pinion'
     /* #swagger.parameters['ringGearTeeth'] = {
@@ -279,7 +279,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/ActualSpeed/:newTireDiamIn/:oldTireDiamIn/:speedoMph', (req, res) => {
+  app.get('/Gearing/ActualSpeed/:newTireDiamIn/:oldTireDiamIn/:speedoMph', (req, res) => {
     // #swagger.tags = ['Gearing']
     /* #swagger.description = 'Determine actual speed when changing tire sizes and not regearing.
           The speedometer is still calibrated at factory specs and this will show what

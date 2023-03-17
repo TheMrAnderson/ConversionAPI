@@ -6,12 +6,6 @@
     "description": ""
   },
   "host": "localhost:3000",
-  "servers": [
-    {
-      "url": "http://localhost",
-      "description": "Local test server"
-    }
-  ],
   "basePath": "/",
   "tags": [
     {
@@ -70,7 +64,7 @@
     "application/json"
   ],
   "paths": {
-    "/AcreToFoot2/{input}": {
+    "/Area/AcreToFoot2/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -94,7 +88,7 @@
         }
       }
     },
-    "/AcreToMile2/{input}": {
+    "/Area/AcreToMile2/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -118,7 +112,7 @@
         }
       }
     },
-    "/AcreToYard2/{input}": {
+    "/Area/AcreToYard2/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -142,7 +136,7 @@
         }
       }
     },
-    "/Foot2ToAcre/{input}": {
+    "/Area/Foot2ToAcre/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -166,7 +160,7 @@
         }
       }
     },
-    "/Foot2ToInch2/{input}": {
+    "/Area/Foot2ToInch2/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -190,7 +184,7 @@
         }
       }
     },
-    "/Inch2ToFoot2/{input}": {
+    "/Area/Inch2ToFoot2/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -214,7 +208,7 @@
         }
       }
     },
-    "/Inch2ToYard2/{input}": {
+    "/Area/Inch2ToYard2/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -238,7 +232,7 @@
         }
       }
     },
-    "/Mile2ToAcre/{input}": {
+    "/Area/Mile2ToAcre/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -262,7 +256,7 @@
         }
       }
     },
-    "/Rod2ToYard2/{input}": {
+    "/Area/Rod2ToYard2/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -286,24 +280,7 @@
         }
       }
     },
-    "/Yard2ToAcre/{input}": {
-      "get": {
-        "tags": [
-          "Area"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "input",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {}
-      }
-    },
-    "/Yard2ToInch2/{input}": {
+    "/Area/Yard2ToAcre/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -320,7 +297,7 @@
         "responses": {}
       }
     },
-    "/Yard2ToRod2/{input}": {
+    "/Area/Yard2ToInch2/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -337,7 +314,7 @@
         "responses": {}
       }
     },
-    "/Circumference/{input}": {
+    "/Area/Yard2ToRod2/{input}": {
       "get": {
         "tags": [
           "Area"
@@ -354,7 +331,24 @@
         "responses": {}
       }
     },
-    "/BushelToCubicInch/{input}": {
+    "/Area/Circumference/{input}": {
+      "get": {
+        "tags": [
+          "Area"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/Capacity/BushelToCubicInch/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -378,7 +372,7 @@
         }
       }
     },
-    "/BushelToLiter/{input}": {
+    "/Capacity/BushelToLiter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -402,7 +396,7 @@
         }
       }
     },
-    "/BushelToPeck/{input}": {
+    "/Capacity/BushelToPeck/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -426,7 +420,7 @@
         }
       }
     },
-    "/CubicCentimetertoCubicInch/{input}": {
+    "/Capacity/CubicCentimetertoCubicInch/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -450,7 +444,7 @@
         }
       }
     },
-    "/CubicDecimeterToCubicInch/{input}": {
+    "/Capacity/CubicDecimeterToCubicInch/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -474,7 +468,7 @@
         }
       }
     },
-    "/CubicFootToCubicMeter/{input}": {
+    "/Capacity/CubicFootToCubicMeter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -498,7 +492,7 @@
         }
       }
     },
-    "/CubicInchToCubicMeter/{input}": {
+    "/Capacity/CubicInchToCubicMeter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -522,7 +516,7 @@
         }
       }
     },
-    "/CubicInchToCubicDecimeter/{input}": {
+    "/Capacity/CubicInchToCubicDecimeter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -546,7 +540,7 @@
         }
       }
     },
-    "/CubicInchToUsGallon/{input}": {
+    "/Capacity/CubicInchToUsGallon/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -570,7 +564,7 @@
         }
       }
     },
-    "/CubicMeterToCubicYard/{input}": {
+    "/Capacity/CubicMeterToCubicYard/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -594,7 +588,7 @@
         }
       }
     },
-    "/CubicYardToCubicMeter/{input}": {
+    "/Capacity/CubicYardToCubicMeter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -618,7 +612,7 @@
         }
       }
     },
-    "/CupToOunce/{input}": {
+    "/Capacity/CupToOunce/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -642,7 +636,7 @@
         }
       }
     },
-    "/UsGallonToCubicInch/{input}": {
+    "/Capacity/UsGallonToCubicInch/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -666,7 +660,7 @@
         }
       }
     },
-    "/UsGallonToLiter/{input}": {
+    "/Capacity/UsGallonToLiter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -690,7 +684,7 @@
         }
       }
     },
-    "/UsGallonToOunce/{input}": {
+    "/Capacity/UsGallonToOunce/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -714,7 +708,7 @@
         }
       }
     },
-    "/LiterToCubicInch/{input}": {
+    "/Capacity/LiterToCubicInch/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -738,7 +732,7 @@
         }
       }
     },
-    "/LiterToUsGallon/{input}": {
+    "/Capacity/LiterToUsGallon/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -762,7 +756,7 @@
         }
       }
     },
-    "/LiterToUsDryQuart/{input}": {
+    "/Capacity/LiterToUsDryQuart/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -786,7 +780,7 @@
         }
       }
     },
-    "/LiterToUsLiquidQuart/{input}": {
+    "/Capacity/LiterToUsLiquidQuart/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -810,7 +804,7 @@
         }
       }
     },
-    "/MilliliterToOunce/{input}": {
+    "/Capacity/MilliliterToOunce/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -834,7 +828,7 @@
         }
       }
     },
-    "/OunceToCubicCentimeter/{input}": {
+    "/Capacity/OunceToCubicCentimeter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -858,7 +852,7 @@
         }
       }
     },
-    "/OunceToCubicInch/{input}": {
+    "/Capacity/OunceToCubicInch/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -882,7 +876,7 @@
         }
       }
     },
-    "/OunceToCup/{input}": {
+    "/Capacity/OunceToCup/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -906,7 +900,7 @@
         }
       }
     },
-    "/OunceToMilliliter/{input}": {
+    "/Capacity/OunceToMilliliter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -930,7 +924,7 @@
         }
       }
     },
-    "/OunceToUsGallon/{input}": {
+    "/Capacity/OunceToUsGallon/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -954,7 +948,7 @@
         }
       }
     },
-    "/OunceToPint/{input}": {
+    "/Capacity/OunceToPint/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -978,7 +972,7 @@
         }
       }
     },
-    "/OunceToQuart/{input}": {
+    "/Capacity/OunceToQuart/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1002,7 +996,7 @@
         }
       }
     },
-    "/OunceToTablespoon/{input}": {
+    "/Capacity/OunceToTablespoon/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1026,7 +1020,7 @@
         }
       }
     },
-    "/OunceToTeaspoon/{input}": {
+    "/Capacity/OunceToTeaspoon/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1050,7 +1044,7 @@
         }
       }
     },
-    "/TeaspoonToTablespoon/{input}": {
+    "/Capacity/TeaspoonToTablespoon/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1074,7 +1068,7 @@
         }
       }
     },
-    "/TablespoonToTeaspoon/{input}": {
+    "/Capacity/TablespoonToTeaspoon/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1098,7 +1092,7 @@
         }
       }
     },
-    "/TablespoonToOunce/{input}": {
+    "/Capacity/TablespoonToOunce/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1122,7 +1116,7 @@
         }
       }
     },
-    "/TeaspoonToOunce/{input}": {
+    "/Capacity/TeaspoonToOunce/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1146,7 +1140,7 @@
         }
       }
     },
-    "/PeckToLiter/{input}": {
+    "/Capacity/PeckToLiter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1170,7 +1164,7 @@
         }
       }
     },
-    "/PeckToUsDryQuart/{input}": {
+    "/Capacity/PeckToUsDryQuart/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1194,7 +1188,7 @@
         }
       }
     },
-    "/PintToCubicCentimeter/{input}": {
+    "/Capacity/PintToCubicCentimeter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1218,7 +1212,7 @@
         }
       }
     },
-    "/PintToCubicFoot/{input}": {
+    "/Capacity/PintToCubicFoot/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1242,7 +1236,7 @@
         }
       }
     },
-    "/PintToCubicInch/{input}": {
+    "/Capacity/PintToCubicInch/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1266,7 +1260,7 @@
         }
       }
     },
-    "/PintToOunce/{input}": {
+    "/Capacity/PintToOunce/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1290,7 +1284,7 @@
         }
       }
     },
-    "/UsQuartToCubicInch/{input}": {
+    "/Capacity/UsQuartToCubicInch/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1314,7 +1308,7 @@
         }
       }
     },
-    "/UsQuartToLiter/{input}": {
+    "/Capacity/UsQuartToLiter/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1338,7 +1332,7 @@
         }
       }
     },
-    "/UsQuartToOunce/{input}": {
+    "/Capacity/UsQuartToOunce/{input}": {
       "get": {
         "tags": [
           "Capacity"
@@ -1362,7 +1356,7 @@
         }
       }
     },
-    "/BatteryRuntimeHours/{loadWattage}/{batteryAh}": {
+    "/Electricity/BatteryRuntimeHours/{loadWattage}/{batteryAh}": {
       "get": {
         "tags": [
           "Electricity"
@@ -1392,7 +1386,7 @@
         }
       }
     },
-    "/BatteryRuntimeMinutes/{loadWattage}/{batteryAh}": {
+    "/Electricity/BatteryRuntimeMinutes/{loadWattage}/{batteryAh}": {
       "get": {
         "tags": [
           "Electricity"
@@ -1422,7 +1416,7 @@
         }
       }
     },
-    "/Ohms": {
+    "/Electricity/Ohms": {
       "get": {
         "tags": [
           "Electricity"
@@ -1458,7 +1452,7 @@
         }
       }
     },
-    "/Amps": {
+    "/Electricity/Amps": {
       "get": {
         "tags": [
           "Electricity"
@@ -1494,7 +1488,7 @@
         }
       }
     },
-    "/Volts": {
+    "/Electricity/Volts": {
       "get": {
         "tags": [
           "Electricity"
@@ -1530,7 +1524,7 @@
         }
       }
     },
-    "/Watts": {
+    "/Electricity/Watts": {
       "get": {
         "tags": [
           "Electricity"
@@ -1566,7 +1560,7 @@
         }
       }
     },
-    "/NewGearRatioNeeded/{newTireDiamIn}/{oldTireDiamIn}/{axleRatio}": {
+    "/Gearing/NewGearRatioNeeded/{newTireDiamIn}/{oldTireDiamIn}/{axleRatio}": {
       "get": {
         "tags": [
           "Gearing"
@@ -1605,7 +1599,7 @@
         }
       }
     },
-    "/EngineRpmAtSpeed/{axleRatio}/{vehicleSpeedMph}/{transRatio}/{tireDiamIn}": {
+    "/Gearing/EngineRpmAtSpeed/{axleRatio}/{vehicleSpeedMph}/{transRatio}/{tireDiamIn}": {
       "get": {
         "tags": [
           "Gearing"
@@ -1651,7 +1645,7 @@
         }
       }
     },
-    "/VehicleSpeedAtEngineRpm/{engineRpm}/{tireDiamIn}/{transRatio}/{auxRatio}/{tCaseRatio}/{axleRatio}": {
+    "/Gearing/VehicleSpeedAtEngineRpm/{engineRpm}/{tireDiamIn}/{transRatio}/{auxRatio}/{tCaseRatio}/{axleRatio}": {
       "get": {
         "tags": [
           "Gearing"
@@ -1711,7 +1705,7 @@
         }
       }
     },
-    "/CrawlRatio/{axleRatio}/{lowTCaseRatio}/{transLowGearRatio}/{auxRatio}": {
+    "/Gearing/CrawlRatio/{axleRatio}/{lowTCaseRatio}/{transLowGearRatio}/{auxRatio}": {
       "get": {
         "tags": [
           "Gearing"
@@ -1757,7 +1751,7 @@
         }
       }
     },
-    "/RotationVelocity/{axleRatio}/{speedMph}/{tireDiamIn}": {
+    "/Gearing/RotationVelocity/{axleRatio}/{speedMph}/{tireDiamIn}": {
       "get": {
         "tags": [
           "Gearing"
@@ -1796,7 +1790,7 @@
         }
       }
     },
-    "/CalculateGearRatio/{ringGearTeeth}/{pinionGearTeeth}": {
+    "/Gearing/CalculateGearRatio/{ringGearTeeth}/{pinionGearTeeth}": {
       "get": {
         "tags": [
           "Gearing"
@@ -1828,7 +1822,7 @@
         }
       }
     },
-    "/ActualSpeed/{newTireDiamIn}/{oldTireDiamIn}/{speedoMph}": {
+    "/Gearing/ActualSpeed/{newTireDiamIn}/{oldTireDiamIn}/{speedoMph}": {
       "get": {
         "tags": [
           "Gearing"
@@ -1867,7 +1861,7 @@
         }
       }
     },
-    "/FluidHP/{pressurePsi}/{pumpFlowGpm}": {
+    "/Hydraulic/FluidHP/{pressurePsi}/{pumpFlowGpm}": {
       "get": {
         "tags": [
           "Hydraulic"
@@ -1894,7 +1888,7 @@
         }
       }
     },
-    "/MotorTorqueToInLbs/{pressurePsi}/{motorDisplacementCuInPerRev}": {
+    "/Hydraulic/MotorTorqueToInLbs/{pressurePsi}/{motorDisplacementCuInPerRev}": {
       "get": {
         "tags": [
           "Hydraulic"
@@ -1921,7 +1915,7 @@
         }
       }
     },
-    "/MotorHP/{torqueInLbs}/{motorRpm}": {
+    "/Hydraulic/MotorHP/{torqueInLbs}/{motorRpm}": {
       "get": {
         "tags": [
           "Hydraulic"
@@ -1948,7 +1942,7 @@
         }
       }
     },
-    "/MotorRPM/{pumpFlowGpm}/{motorDisplacementCuInPerRev}": {
+    "/Hydraulic/MotorRPM/{pumpFlowGpm}/{motorDisplacementCuInPerRev}": {
       "get": {
         "tags": [
           "Hydraulic"
@@ -1975,7 +1969,7 @@
         }
       }
     },
-    "/MillimeterToInch/{input}": {
+    "/Length/MillimeterToInch/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -1999,7 +1993,7 @@
         }
       }
     },
-    "/CentimeterToInch/{input}": {
+    "/Length/CentimeterToInch/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2023,7 +2017,7 @@
         }
       }
     },
-    "/FootToMillimeter/{input}": {
+    "/Length/FootToMillimeter/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2047,7 +2041,7 @@
         }
       }
     },
-    "/InchToCentimeter/{input}": {
+    "/Length/InchToCentimeter/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2071,7 +2065,7 @@
         }
       }
     },
-    "/InchToMillimeter/{input}": {
+    "/Length/InchToMillimeter/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2095,7 +2089,7 @@
         }
       }
     },
-    "/KilometerToMile/{input}": {
+    "/Length/KilometerToMile/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2119,7 +2113,7 @@
         }
       }
     },
-    "/MeterToFoot/{input}": {
+    "/Length/MeterToFoot/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2143,7 +2137,7 @@
         }
       }
     },
-    "/MeterToInch/{input}": {
+    "/Length/MeterToInch/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2167,7 +2161,7 @@
         }
       }
     },
-    "/MileToKilometer/{input}": {
+    "/Length/MileToKilometer/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2191,7 +2185,7 @@
         }
       }
     },
-    "/MicrometerToInch/{input}": {
+    "/Length/MicrometerToInch/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2215,7 +2209,7 @@
         }
       }
     },
-    "/YardToMillimeter/{input}": {
+    "/Length/YardToMillimeter/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2239,7 +2233,7 @@
         }
       }
     },
-    "/RackUToInch/{input}": {
+    "/Length/RackUToInch/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2263,7 +2257,7 @@
         }
       }
     },
-    "/InchToRackU/{input}": {
+    "/Length/InchToRackU/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2287,7 +2281,7 @@
         }
       }
     },
-    "/InchToHand/{input}": {
+    "/Length/InchToHand/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2311,7 +2305,7 @@
         }
       }
     },
-    "/HandToInch/{input}": {
+    "/Length/HandToInch/{input}": {
       "get": {
         "tags": [
           "Length"
@@ -2335,7 +2329,7 @@
         }
       }
     },
-    "/FuelCostForRuntime/{numberHoursToRun}/{fuelPricePerUnit}/{burnRateUPH}": {
+    "/Rate/FuelCostForRuntime/{numberHoursToRun}/{fuelPricePerUnit}/{burnRateUPH}": {
       "get": {
         "tags": [
           "Rate"
@@ -2374,7 +2368,7 @@
         }
       }
     },
-    "/FuelTankRuntime/{burnRateUPH}/{fuelTankCapacity}": {
+    "/Rate/FuelTankRuntime/{burnRateUPH}/{fuelTankCapacity}": {
       "get": {
         "tags": [
           "Rate"
@@ -2406,7 +2400,7 @@
         }
       }
     },
-    "/RevsPerMilePerMillimeter/{input}": {
+    "/Revolutions/RevsPerMilePerMillimeter/{input}": {
       "get": {
         "tags": [
           "Revolutions"
@@ -2430,7 +2424,7 @@
         }
       }
     },
-    "/RevsPerMilePerInch/{input}": {
+    "/Revolutions/RevsPerMilePerInch/{input}": {
       "get": {
         "tags": [
           "Revolutions"
@@ -2454,7 +2448,7 @@
         }
       }
     },
-    "/RevsPerKilometerPerMillimeter/{input}": {
+    "/Revolutions/RevsPerKilometerPerMillimeter/{input}": {
       "get": {
         "tags": [
           "Revolutions"
@@ -2478,7 +2472,7 @@
         }
       }
     },
-    "/RevsPerKilometerPerInch/{input}": {
+    "/Revolutions/RevsPerKilometerPerInch/{input}": {
       "get": {
         "tags": [
           "Revolutions"
@@ -2502,7 +2496,7 @@
         }
       }
     },
-    "/MphToKnots/{input}": {
+    "/Speed/MphToKnots/{input}": {
       "get": {
         "tags": [
           "Speed"
@@ -2526,7 +2520,7 @@
         }
       }
     },
-    "/KnotsToMph/{input}": {
+    "/Speed/KnotsToMph/{input}": {
       "get": {
         "tags": [
           "Speed"
@@ -2550,7 +2544,7 @@
         }
       }
     },
-    "/KnotsToMach/{input}": {
+    "/Speed/KnotsToMach/{input}": {
       "get": {
         "tags": [
           "Speed"
@@ -2574,7 +2568,7 @@
         }
       }
     },
-    "/MphToMach/{input}": {
+    "/Speed/MphToMach/{input}": {
       "get": {
         "tags": [
           "Speed"
@@ -2598,7 +2592,7 @@
         }
       }
     },
-    "/CelciusToFehrenheit/{input}": {
+    "/Temperature/CelciusToFehrenheit/{input}": {
       "get": {
         "tags": [
           "Temperature"
@@ -2622,7 +2616,7 @@
         }
       }
     },
-    "/FehrenheitToCelcius/{input}": {
+    "/Temperature/FehrenheitToCelcius/{input}": {
       "get": {
         "tags": [
           "Temperature"
@@ -2646,7 +2640,7 @@
         }
       }
     },
-    "/GramCentimeterToDyneCentimeter/{input}": {
+    "/Torque/GramCentimeterToDyneCentimeter/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2670,7 +2664,7 @@
         }
       }
     },
-    "/GramCentimeterToKilogramMeter/{input}": {
+    "/Torque/GramCentimeterToKilogramMeter/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2694,7 +2688,7 @@
         }
       }
     },
-    "/GramCentimeterToNewtonMeter/{input}": {
+    "/Torque/GramCentimeterToNewtonMeter/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2718,7 +2712,7 @@
         }
       }
     },
-    "/GramCentimeterToOunceInch/{input}": {
+    "/Torque/GramCentimeterToOunceInch/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2742,7 +2736,7 @@
         }
       }
     },
-    "/GramCentimeterToPoundFoot/{input}": {
+    "/Torque/GramCentimeterToPoundFoot/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2766,7 +2760,7 @@
         }
       }
     },
-    "/MilliNewtonMeterToOunceInch/{input}": {
+    "/Torque/MilliNewtonMeterToOunceInch/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2790,7 +2784,7 @@
         }
       }
     },
-    "/NewtonCentimeterToOunceInch/{input}": {
+    "/Torque/NewtonCentimeterToOunceInch/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2814,7 +2808,7 @@
         }
       }
     },
-    "/NewtonMeterToOunceInch/{input}": {
+    "/Torque/NewtonMeterToOunceInch/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2838,7 +2832,7 @@
         }
       }
     },
-    "/OunceInchToDyneCentimeter/{input}": {
+    "/Torque/OunceInchToDyneCentimeter/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2862,7 +2856,7 @@
         }
       }
     },
-    "/OunceInchToKilogramMeter/{input}": {
+    "/Torque/OunceInchToKilogramMeter/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2886,7 +2880,7 @@
         }
       }
     },
-    "/OunceInchToMilliNewtonMeter/{input}": {
+    "/Torque/OunceInchToMilliNewtonMeter/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2910,7 +2904,7 @@
         }
       }
     },
-    "/OunceInchToNewtonCentimeter/{input}": {
+    "/Torque/OunceInchToNewtonCentimeter/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2934,7 +2928,7 @@
         }
       }
     },
-    "/OunceInchToNewtonMeter/{input}": {
+    "/Torque/OunceInchToNewtonMeter/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2958,7 +2952,7 @@
         }
       }
     },
-    "/OunceInchToPoundFoot/{input}": {
+    "/Torque/OunceInchToPoundFoot/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -2982,7 +2976,7 @@
         }
       }
     },
-    "/OunceInchToPoundInch/{input}": {
+    "/Torque/OunceInchToPoundInch/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -3006,7 +3000,7 @@
         }
       }
     },
-    "/NewtonMeterToPoundFoot/{input}": {
+    "/Torque/NewtonMeterToPoundFoot/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -3030,7 +3024,7 @@
         }
       }
     },
-    "/PoundFootToNewtonMeter/{input}": {
+    "/Torque/PoundFootToNewtonMeter/{input}": {
       "get": {
         "tags": [
           "Torque"
@@ -3054,7 +3048,7 @@
         }
       }
     },
-    "/CaratToGram/{input}": {
+    "/Weight/CaratToGram/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3078,7 +3072,7 @@
         }
       }
     },
-    "/GrainToGram/{input}": {
+    "/Weight/GrainToGram/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3102,7 +3096,7 @@
         }
       }
     },
-    "/GrainToOunce/{input}": {
+    "/Weight/GrainToOunce/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3126,7 +3120,7 @@
         }
       }
     },
-    "/GrainToTroyPennyweight/{input}": {
+    "/Weight/GrainToTroyPennyweight/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3150,7 +3144,7 @@
         }
       }
     },
-    "/GramToGrain/{input}": {
+    "/Weight/GramToGrain/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3174,7 +3168,7 @@
         }
       }
     },
-    "/GramToOunce/{input}": {
+    "/Weight/GramToOunce/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3198,7 +3192,7 @@
         }
       }
     },
-    "/GramToPound/{input}": {
+    "/Weight/GramToPound/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3222,7 +3216,7 @@
         }
       }
     },
-    "/KilogramToPound/{input}": {
+    "/Weight/KilogramToPound/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3246,7 +3240,7 @@
         }
       }
     },
-    "/OunceToGrain/{input}": {
+    "/Weight/OunceToGrain/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3270,7 +3264,7 @@
         }
       }
     },
-    "/OunceToGram/{input}": {
+    "/Weight/OunceToGram/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3294,7 +3288,7 @@
         }
       }
     },
-    "/OunceToTroyOunce/{input}": {
+    "/Weight/OunceToTroyOunce/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3318,7 +3312,7 @@
         }
       }
     },
-    "/PointToCarat/{input}": {
+    "/Weight/PointToCarat/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3342,7 +3336,7 @@
         }
       }
     },
-    "/PointToGram/{input}": {
+    "/Weight/PointToGram/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3366,7 +3360,7 @@
         }
       }
     },
-    "/PoundToGram/{input}": {
+    "/Weight/PoundToGram/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3390,7 +3384,7 @@
         }
       }
     },
-    "/PoundToOunce/{input}": {
+    "/Weight/PoundToOunce/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3414,7 +3408,7 @@
         }
       }
     },
-    "/PoundToTroyPound/{input}": {
+    "/Weight/PoundToTroyPound/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3438,7 +3432,7 @@
         }
       }
     },
-    "/TroyGrainToGrain/{input}": {
+    "/Weight/TroyGrainToGrain/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3462,7 +3456,7 @@
         }
       }
     },
-    "/TroyPennyweightToGrain/{input}": {
+    "/Weight/TroyPennyweightToGrain/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3486,7 +3480,7 @@
         }
       }
     },
-    "/TroyPennyweightToTroyOunce/{input}": {
+    "/Weight/TroyPennyweightToTroyOunce/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3510,7 +3504,7 @@
         }
       }
     },
-    "/TroyPoundToPound/{input}": {
+    "/Weight/TroyPoundToPound/{input}": {
       "get": {
         "tags": [
           "Weight"
@@ -3534,7 +3528,7 @@
         }
       }
     },
-    "/TroyPoundToTroyOunce/{input}": {
+    "/Weight/TroyPoundToTroyOunce/{input}": {
       "get": {
         "tags": [
           "Weight"
