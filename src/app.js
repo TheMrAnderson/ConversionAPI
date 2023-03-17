@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
-  res.send(`Welcome to ConversionAPI!  Documentation is on http://localhost:${port}/swagger`);
+  res.send(`Welcome to ConversionAPI!  Documentation is on http://SERVERIP:${port}/swagger`);
 });
 
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile));

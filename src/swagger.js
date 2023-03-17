@@ -62,12 +62,6 @@ const doc = {
       description: 'Convert weight'
     }
   ],
-  servers: [
-    {
-      url: 'http://localhost',
-      description: 'Local test server',
-    },
-  ],
   apis: ['./controllers/v2/*.js'],
 };
 
