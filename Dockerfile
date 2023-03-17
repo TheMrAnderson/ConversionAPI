@@ -20,6 +20,8 @@ USER node
 # Copy the rest of the code
 COPY --chown=node:node . .
 
+RUN touch /usr/src/app/swagger-output.json
+
 # Open desired port
 EXPOSE 3000
 
