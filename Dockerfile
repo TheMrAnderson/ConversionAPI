@@ -7,6 +7,7 @@ ENV NODE_ENV production
 RUN apk --no-cache -U upgrade
 
 WORKDIR /usr/src/app
+# WORKDIR /
 
 # Copy package.json and package-lock.json to WORKDIR
 COPY package*.json ./
@@ -17,13 +18,12 @@ RUN npm install --only=production
 # Copy the rest of the code
 COPY --chown=node:node . .
 
-RUN touch /usr/src/app/swagger-output.json
-
 # Switch to non-root user
-USER node
+# USER node
 
 # Open desired port
 EXPOSE 3000
 
 # Run the application
 CMD ["node", "/usr/src/app/src/swagger.js"]
+# CMD ["node", "/src/swagger.js"]

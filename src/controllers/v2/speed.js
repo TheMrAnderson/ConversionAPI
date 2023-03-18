@@ -1,5 +1,5 @@
-module.exports = function (app) {
-  app.get('/Speed/MphToKnots/:input', (req, res) => {
+module.exports = (app) => {
+  app.get('/api/v2/Speed/MphToKnots/:input', (req, res) => {
     // #swagger.tags = ['Speed']
     try {
       const { input } = req.params;
@@ -11,7 +11,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Speed/KnotsToMph/:input', (req, res) => {
+  app.get('/api/v2/Speed/KnotsToMph/:input', (req, res) => {
     // #swagger.tags = ['Speed']
     try {
       const { input } = req.params;
@@ -23,7 +23,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Speed/KnotsToMach/:input', (req, res) => {
+  app.get('/api/v2/Speed/KnotsToMach/:input', (req, res) => {
     // #swagger.tags = ['Speed']
     try {
       const { input } = req.params;
@@ -35,7 +35,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Speed/MphToMach/:input', (req, res) => {
+  app.get('/api/v2/Speed/MphToMach/:input', (req, res) => {
     // #swagger.tags = ['Speed']
     try {
       const { input } = req.params;

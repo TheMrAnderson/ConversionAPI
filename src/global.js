@@ -1,4 +1,4 @@
-let Globals = {
+const Globals = {
   ipAddress: undefined,
   port: undefined
 };

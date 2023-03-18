@@ -1,5 +1,5 @@
-module.exports = function (app) {
-  app.get('/Rate/FuelCostForRuntime/:numberHoursToRun/:fuelPricePerUnit/:burnRateUPH', (req, res) => {
+module.exports = (app) => {
+  app.get('/api/v2/Rate/FuelCostForRuntime/:numberHoursToRun/:fuelPricePerUnit/:burnRateUPH', (req, res) => {
     // #swagger.tags = ['Rate']
     // #swagger.description = Calculate fuel cost for the desired runtime
     /* #swagger.parameters['numberHoursToRun'] = {
@@ -34,7 +34,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Rate/FuelTankRuntime/:burnRateUPH/:fuelTankCapacity', (req, res) => {
+  app.get('/api/v2/Rate/FuelTankRuntime/:burnRateUPH/:fuelTankCapacity', (req, res) => {
     // #swagger.tags = ['Rate']
     // #swagger.description = Calculate runtime for the fuel tank
     /* #swagger.parameters['burnRateUPH'] = {

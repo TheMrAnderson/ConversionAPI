@@ -9,17 +9,18 @@ const app = express();
 app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
-  res.send(`Welcome to ConversionAPI!  Documentation is on http://${g.Globals.ipAddress}:${g.Globals.port}/swagger`);
+  res.send(`Welcome to ConversionAPI!  Documentation is located
+  <a href="http://${g.Globals.ipAddress}:${g.Globals.port}/swagger">here</a>`);
 });
 
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 require('./controllers/v2/area')(app);
 require('./controllers/v2/capacity')(app);
+require('./controllers/v2/distance')(app);
 require('./controllers/v2/electricity')(app);
 require('./controllers/v2/gearing')(app);
 require('./controllers/v2/hydraulic')(app);
-require('./controllers/v2/length')(app);
 require('./controllers/v2/rate')(app);
 require('./controllers/v2/revolutions')(app);
 require('./controllers/v2/speed')(app);

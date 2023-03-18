@@ -1,5 +1,5 @@
-module.exports = function (app) {
-  app.get('/Temperature/CelciusToFehrenheit/:input', (req, res) => {
+module.exports = (app) => {
+  app.get('/api/v2/Temperature/CelciusToFehrenheit/:input', (req, res) => {
     // #swagger.tags = ['Temperature']
     try {
       const obj = (req.params.input * 1.8) + 32;
@@ -11,7 +11,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Temperature/FehrenheitToCelcius/:input', (req, res) => {
+  app.get('/api/v2/Temperature/FehrenheitToCelcius/:input', (req, res) => {
     // #swagger.tags = ['Temperature']
     try {
       const obj = (req.params.input - 32) * 0.555555555556;

@@ -1,6 +1,8 @@
+helpfulscripts.md
+swagger-output.json
+
 .gitignore
 .env
 node_modules
 npm-debug.log
 .vscode
-swagger-output.json

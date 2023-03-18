@@ -1,5 +1,5 @@
-module.exports = function (app) {
-  app.get('/Revolutions/RevsPerMilePerMillimeter/:input', (req, res) => {
+module.exports = (app) => {
+  app.get('/api/v2/Revolutions/RevsPerMilePerMillimeter/:input', (req, res) => {
     // #swagger.tags = ['Revolutions']
     try {
       // Convert a mile to mm, then gets revs per mile
@@ -13,7 +13,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Revolutions/RevsPerMilePerInch/:input', (req, res) => {
+  app.get('/api/v2/Revolutions/RevsPerMilePerInch/:input', (req, res) => {
     // #swagger.tags = ['Revolutions']
     try {
       // Convert a mile to inches, then gets revs per mile
@@ -27,7 +27,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Revolutions/RevsPerKilometerPerMillimeter/:input', (req, res) => {
+  app.get('/api/v2/Revolutions/RevsPerKilometerPerMillimeter/:input', (req, res) => {
     // #swagger.tags = ['Revolutions']
     try {
       // Convert a KM to MM, then get revs per KM
@@ -41,7 +41,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Revolutions/RevsPerKilometerPerInch/:input', (req, res) => {
+  app.get('/api/v2/Revolutions/RevsPerKilometerPerInch/:input', (req, res) => {
     // #swagger.tags = ['Revolutions']
     try {
       // Convert a KM to inches, then get revs per KM

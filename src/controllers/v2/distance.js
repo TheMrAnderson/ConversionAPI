@@ -1,6 +1,6 @@
-module.exports = function (app) {
-  app.get('/Length/MillimeterToInch/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+module.exports = (app) => {
+  app.get('/api/v2/Distance/MillimeterToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -11,8 +11,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/CentimeterToInch/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/CentimeterToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -23,8 +23,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/FootToMillimeter/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/FootToMillimeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -35,8 +35,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/InchToCentimeter/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/InchToCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -47,8 +47,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/InchToMillimeter/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/InchToMillimeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -59,8 +59,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/KilometerToMile/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/KilometerToMile/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -71,8 +71,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/MeterToFoot/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/MeterToFoot/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -83,8 +83,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/MeterToInch/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/MeterToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -95,8 +95,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/MileToKilometer/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/MileToKilometer/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -107,8 +107,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/MicrometerToInch/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/MicrometerToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -119,8 +119,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/YardToMillimeter/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/YardToMillimeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -131,8 +131,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/RackUToInch/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/RackUToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -143,8 +143,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/InchToRackU/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/InchToRackU/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -155,8 +155,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/InchToHand/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/InchToHand/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({
@@ -167,8 +167,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Length/HandToInch/:input', (req, res) => {
-    // #swagger.tags = ['Length']
+  app.get('/api/v2/Distance/HandToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
     try {
       const { input } = req.params;
       res.json({

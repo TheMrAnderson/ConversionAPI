@@ -62,8 +62,8 @@ function getWattsAmpOhm(amps, ohms) {
   return (amps * amps) / ohms;
 }
 
-module.exports = function (app) {
-  app.get('/Electricity/BatteryRuntimeHours/:loadWattage/:batteryAh', (req, res) => {
+module.exports = (app) => {
+  app.get('/api/v2/Electricity/BatteryRuntimeHours/:loadWattage/:batteryAh', (req, res) => {
     // #swagger.tags = ['Electricity']
     try {
       const { loadWattage } = req.params;
@@ -74,7 +74,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Electricity/BatteryRuntimeMinutes/:loadWattage/:batteryAh', (req, res) => {
+  app.get('/api/v2/Electricity/BatteryRuntimeMinutes/:loadWattage/:batteryAh', (req, res) => {
     // #swagger.tags = ['Electricity']
     try {
       const { loadWattage } = req.params;
@@ -85,7 +85,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Electricity/Ohms', (req, res) => {
+  app.get('/api/v2/Electricity/Ohms', (req, res) => {
     // #swagger.tags = ['Electricity']
     // #swagger.description = 'Get ohms by supplying any 2 of the parameters'
     /* #swagger.parameters['volts'] = {
@@ -137,7 +137,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Electricity/Amps', (req, res) => {
+  app.get('/api/v2/Electricity/Amps', (req, res) => {
     // #swagger.tags = ['Electricity']
     // #swagger.description = 'Get amps by supplying any 2 of the parameters'
     /* #swagger.parameters['volts'] = {
@@ -189,7 +189,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Electricity/Volts', (req, res) => {
+  app.get('/api/v2/Electricity/Volts', (req, res) => {
     // #swagger.tags = ['Electricity']
     // #swagger.description = 'Get volts by supplying any 2 of the parameters'
     /* #swagger.parameters['amps'] = {
@@ -241,7 +241,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/Electricity/Watts', (req, res) => {
+  app.get('/api/v2/Electricity/Watts', (req, res) => {
     // #swagger.tags = ['Electricity']
     // #swagger.description = 'Get watts by supplying any 2 of the parameters'
     /* #swagger.parameters['volts'] = {

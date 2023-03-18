@@ -1,11 +1,14 @@
 const swaggerAutogen = require('swagger-autogen')();
-const g = require('./global');
 const myip = require('quick-local-ip');
+const fs = require('fs');
+const g = require('./global');
 
 g.Globals.port = process.env.PORT || 3000;
+console.log(`Port: ${g.Globals.port}`);
 
 // getting ip4 network address of local system
 g.Globals.ipAddress = myip.getLocalIP4();
+console.log(`IP Address: ${g.Globals.ipAddress}`);
 
 const doc = {
   definition: {
@@ -29,6 +32,10 @@ const doc = {
       description: 'Convert capacity'
     },
     {
+      name: 'Distance',
+      description: 'Convert distance'
+    },
+    {
       name: 'Electricity',
       description: 'Perform electricity calculations'
     },
@@ -39,10 +46,6 @@ const doc = {
     {
       name: 'Hydraulic',
       description: 'Perform hydraulic calculations'
-    },
-    {
-      name: 'Length',
-      description: 'Convert length'
     },
     {
       name: 'Rate',
@@ -81,6 +84,12 @@ const doc = {
 const outputFile = '../swagger-output.json';
 const endpointsFiles = ['./controllers/v2/*.js'];
 
-swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
-  require('./app'); // Your project's root file
+fs.writeFileSync(outputFile, '{ }', function (err) {
+  if (err) throw err;
+  console.log('Wrote blank outputFile');
 });
+
+swaggerAutogen(outputFile, endpointsFiles, doc)
+  .then(() => {
+    require('./app'); // Your project's root file
+  });
