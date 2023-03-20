@@ -9,7 +9,11 @@
       "request": "launch",
       "name": "Run",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/swagger.js"
+      "program": "${workspaceFolder}/src/swagger.js",
+      "env": {
+        "IPADDRESS": "localhost",
+        "PORT": "3000"
+      }
     }
   ]
 }

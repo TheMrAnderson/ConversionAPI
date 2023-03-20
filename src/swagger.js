@@ -1,14 +1,12 @@
 const swaggerAutogen = require('swagger-autogen')();
-const myip = require('quick-local-ip');
 const fs = require('fs');
+const p = require('node:process');
 const g = require('./global');
+require('dotenv').config();
 
 g.Globals.port = process.env.PORT || 3000;
+g.Globals.ipAddress = process.env.IPADDRESS;
 console.log(`Port: ${g.Globals.port}`);
-
-// getting ip4 network address of local system
-g.Globals.ipAddress = myip.getLocalIP4();
-console.log(`IP Address: ${g.Globals.ipAddress}`);
 
 const doc = {
   definition: {

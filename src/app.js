@@ -1,12 +1,9 @@
 const express = require('express');
-const morgan = require('morgan');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('../swagger-output.json');
 const g = require('./global');
 
 const app = express();
-
-app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
   res.send(`Welcome to ConversionAPI!  Documentation is located
