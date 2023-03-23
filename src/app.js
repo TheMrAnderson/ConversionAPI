@@ -1,6 +1,7 @@
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('../swagger-output.json');
+const helmet = require('helmet');
 const g = require('./global');
 
 const app = express();
@@ -11,6 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use(helmet());
 
 require('./controllers/v2/area')(app);
 require('./controllers/v2/capacity')(app);
