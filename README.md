@@ -1,18 +1,24 @@
 # ConversionAPI
 
-This all started with my dad having a spreadsheet with random conversions.  Some were weird and some were not so weird.  I have ported them to a couple of languages over the years as needed.  I've also added quite a few conversions as my needs changed, as well as some calculations that aren't conversions.  Now it's an API running in a Docker container.
+A collection of conversions from various sources as well as calculations written in NodeJS and wrapped in a [Docker container](https://hub.docker.com/r/themranderson/conversionapi) with Swagger documentation for easy consumption.
 
 ## Usage
 
-Use the [Docker container](https://hub.docker.com/r/themranderson/conversionapi).
-
 Example Docker Command: `docker run -p '3000:3000/tcp' -e 'IPADDRESS=localhost' -e 'PORT=3000' 'themranderson/conversionapi:latest'`
+
+Root endpoint (example: `http://localhost:3000`) returns a 200 and also builds a link to the Swagger page upon container start.  The root endpoint can be used for an API health check if desired.
+
+Swagger documentation is auto generated upon container startup.
+
+Example API call: `http://localhost:3000/api/v2/Capacity/OunceToUsGallon/5`
 
 ### Environment Variables
 
-- `PORT` sets the port the API uses
-- `IPADDRESS` is to tell Docker and the root page where to set the server IP Address or hostname for your environment
+Both `PORT` and `IPADDRESS` are to configure not only the API, but also Swagger so the documentation works as expected.  The Swagger page is automatically built with every container start and these values are passed in.
+
+- `PORT`: The port you want to expose.  Should match the container port mapping
+- `IPADDRESS`: The IP address or hostname you are using for the container.
 
 ## Contributing
 
-If you notice a bug, please report an issue. If you would like to contribute, please submit a PR.
+If you notice a bug, please report an issue or jump in a fix it. If you would like to contribute, please submit a PR.

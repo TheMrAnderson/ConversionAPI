@@ -107,7 +107,7 @@ module.exports = (app) => {
     }
   });
 
-  app.get('/api/v2/Area/Yard2ToAcre/:input', (res, req) => {
+  app.get('/api/v2/Area/Yard2ToAcre/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -119,7 +119,7 @@ module.exports = (app) => {
     }
   });
 
-  app.get('/api/v2/Area/Yard2ToInch2/:input', (res, req) => {
+  app.get('/api/v2/Area/Yard2ToInch2/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -131,7 +131,7 @@ module.exports = (app) => {
     }
   });
 
-  app.get('/api/v2/Area/Yard2ToRod2/:input', (res, req) => {
+  app.get('/api/v2/Area/Yard2ToRod2/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
@@ -143,7 +143,7 @@ module.exports = (app) => {
     }
   });
 
-  app.get('/api/v2/Area/Circumference/:input', (res, req) => {
+  app.get('/api/v2/Area/Circumference/:input', (req, res) => {
     // #swagger.tags = ['Area']
     try {
       const { input } = req.params;
