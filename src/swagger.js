@@ -1,12 +1,10 @@
 const swaggerAutogen = require('swagger-autogen')();
 const fs = require('fs');
-const p = require('node:process');
 const g = require('./global');
 require('dotenv').config();
 
 g.Globals.port = process.env.PORT || 3000;
 g.Globals.ipAddress = process.env.IPADDRESS;
-console.log(`Port: ${g.Globals.port}`);
 
 const doc = {
   definition: {

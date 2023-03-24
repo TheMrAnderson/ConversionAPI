@@ -28,5 +28,5 @@ require('./controllers/v2/torque')(app);
 require('./controllers/v2/weight')(app);
 
 app.listen(g.Globals.port, () => {
-  console.log(`Running on port ${g.Globals.port}`);
+  console.log(`Running on ${g.Globals.ipAddress}:${g.Globals.port}`);
 });
