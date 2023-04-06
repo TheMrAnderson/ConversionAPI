@@ -75,6 +75,22 @@ const doc = {
     },
   ],
   host: `${g.Globals.ipAddress}:${g.Globals.port}`,
+  definitions: {
+    GearingChange: {
+      oldTireDiamIn: '30',
+      newTireDiamIn: '35',
+      oldAxleRatio: '3.73',
+      newAxleRatio: '4.88',
+      tCaseLowRatio: '4',
+      auxRatio: '1.6',
+      transRatioGearList: [
+        {
+          name: '1st',
+          ratio: '3.83'
+        }
+      ]
+    }
+  }
 };
 
 const outputFile = '../swagger-output.json';
