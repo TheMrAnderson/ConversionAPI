@@ -2,7 +2,6 @@ FROM node:20.0-bullseye-slim
 
 # Set node environment to production
 ENV NODE_ENV production
-RUN apk --no-cache -U upgrade
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --only=production
