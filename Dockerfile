@@ -1,4 +1,4 @@
-FROM node:20.0-bullseye-slim
+FROM node:bullseye-slim
 
 # Set node environment to production
 ENV NODE_ENV production
