@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Image Master - Stable
 
 on:
   pull_request:
