@@ -1,4 +1,4 @@
-FROM node:21.6-bookworm-slim
+FROM node:21.7.2-bookworm-slim
 
 # Set node environment to production
 ENV NODE_ENV production
