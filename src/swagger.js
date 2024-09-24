@@ -5,6 +5,8 @@ require('dotenv').config();
 
 g.Globals.port = process.env.PORT || 3000;
 g.Globals.ipAddress = process.env.IPADDRESS;
+g.Globals.rateLimitMinutes = process.env.RATELIMITMINUTES || 15;
+g.Globals.rateLimitMax = process.env.RATELIMITMAX || 100;
 
 const doc = {
   definition: {
