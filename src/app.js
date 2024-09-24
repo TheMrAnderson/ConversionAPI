@@ -1,6 +1,7 @@
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const swaggerFile = require('../swagger-output.json');
 const g = require('./global');
 
@@ -14,6 +15,16 @@ app.get('/', (req, res) => {
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use(express.json()); // parse body request as json
 app.use(helmet());
+
+const limiter = rateLimit({
+  windowMs: g.Globals.rateLimitMinutes * 60 * 1000, // Passed in minutes
+  max: g.Globals.rateLimitMax, // Limit each IP to passed in number of requests per `window`
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
+
+// Apply the rate limiting middleware to all requests
+app.use(limiter);
 
 require('./controllers/v2/area')(app);
 require('./controllers/v2/capacity')(app);

@@ -1,8 +1,7 @@
-FROM node:14-alpine
+FROM node:21.7.3-bookworm-slim
 
 # Set node environment to production
 ENV NODE_ENV production
-RUN apk --no-cache -U upgrade
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --only=production
