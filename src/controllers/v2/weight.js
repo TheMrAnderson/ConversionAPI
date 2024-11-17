@@ -250,4 +250,186 @@ module.exports = (app) => {
       res.status(500).json(e);
     }
   });
+
+  app.get('/api/v2/Weight/GerahToOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Exodus 30:13
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.0201
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/GerahToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Exodus 30:13
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.57
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/BekaToOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Genesis 24:22
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.201
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/BekaToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Genesis 24:22
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 5.7
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/PimToOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // 1 Samuel 13:21
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.268
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/PimToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // 1 Samuel 13:21
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 7.6
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/ShekelToOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Genesis 23:15
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.402
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/ShekelToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Genesis 23:15
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 11.4
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/MinaToUsPound/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Ezra 2:69
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 1.256
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/MinaToKilogram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Ezra 2:69
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.57
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/TalentToUsPound/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Exodus 25:39
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 75.4
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/TalentToKilogram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // Exodus 25:39
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 34.2
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/LitraToOunce/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // John 19:39
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 12
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Weight/LitraToGram/:input', (req, res) => {
+    // #swagger.tags = ['Weight']
+    // John 19:39
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 340
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
 };
