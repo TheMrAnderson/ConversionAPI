@@ -178,4 +178,238 @@ module.exports = (app) => {
       res.status(500).json(e);
     }
   });
+
+  app.get('api/v2/Distance/FingerToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Jeremiah 52:21
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.73
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/FingerToCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Jeremiah 52:21
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 1.85
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/HandbreadthToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Exodus 25:25
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 2.92
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/HandbreadthToCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Exodus 25:25
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 7.42
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/SpanToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Exodus 28:16
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 9
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/SpanToCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Exodus 28:16
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 22.86
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/CubitToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Genesis 6:15
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 18
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/CubitToCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Genesis 6:15
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 45.72
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/LongCubitToInch/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Ezekiel 40:5
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 21
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/LongCubitToCentimeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Ezekiel 40:5
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 53.34
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/RodToFeet/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Ezekiel 40:5
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 10.5
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/RodToMeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Ezekiel 40:5
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 3.20
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/FathomToFeet/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Acts 27:28
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 6
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/FathomToMeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Acts 27:28
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 1.829
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/FurlongToFeet/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Revelation 14:20
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 660
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/FurlongToMeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Revelation 14:20
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 201.168
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/StadionToFeet/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Luke 24:13
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 607
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('api/v2/Distance/StadionToMeter/:input', (req, res) => {
+    // #swagger.tags = ['Distance']
+    // Luke 24:13
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 185
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
 };
