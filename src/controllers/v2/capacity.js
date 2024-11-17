@@ -502,4 +502,342 @@ module.exports = (app) => {
       res.status(500).json(e);
     }
   });
+
+  app.get('/api/v2/Capacity/LogToUsQuart/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Leviticus 14:10
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.33
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/LogToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Leviticus 14:10
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.31
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/HinToUsGallon/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Numbers 15:4
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.98
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/HinToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Numbers 15:4
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 3.71
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/OldTestamentBathToUsGallon/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // 1 Kings 5:11
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 5.8
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/OldTestamentBathToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // 1 Kings 5:11
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 22
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get(['/api/v2/Capacity/LiquidHomerToUsGallon/:input', '/api/v2/Capacity/CorToUsGallon/:input'], (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Ezekiel 45:11
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 58
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get(['/api/v2/Capacity/LiquidHomerToLiter/:input', '/api/v2/Capacity/CorToLiter/:input'], (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Ezekiel 45:11
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 220
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/NewTestamentBathToUsGallon/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Luke 16:6
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 8.7
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/NewTestamentBathToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Luke 16:6
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 32.9
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/MetretesToUsGallon/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // John 2:6
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 10.4
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/MetretesToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // John 2:6
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 39.4
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/CabToDryQuart/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // 2 Kings 6:25
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 1.1
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/CabToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // 2 Kings 6:25
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 1.2
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/OmerToDryQuart/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Exodus 16:16
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 2.0
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/OmerToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Exodus 16:16
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 2.2
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/SeahToDryQuart/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Genesis 18:6
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 6.7
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/SeahToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Genesis 18:6
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 7.3
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/EphahToBushel/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Exodus 16:36
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 0.624
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/EphahToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Exodus 16:36
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 22
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/LethechToBushel/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Hosea 3:2
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 3.12
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/LethechToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Hosea 3:2
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 110
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get(['/api/v2/Capacity/DryHomerToBushel/:input', '/api/v2/Capacity/OldTestamentCorToBushel/:input'], (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Leviticus 27:16, 1 Kings 4:22
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 6.24
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get(['/api/v2/Capacity/DryHomerToLiter/:input', '/api/v2/Capacity/OldTestamentCorToLiter/:input'], (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Leviticus 27:16, 1 Kings 4:22
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 220
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/NewTestamentCorToBushel/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Luke 16:7
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 10
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
+
+  app.get('/api/v2/Capacity/NewTestamentCorToLiter/:input', (req, res) => {
+    // #swagger.tags = ['Capacity']
+    // Luke 16:7
+    try {
+      const { input } = req.params;
+      res.json({
+        result: input * 350
+      });
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  });
 };
