@@ -24,3 +24,7 @@ Both `PORT` and `IPADDRESS` are to configure not only the API, but also Swagger 
 ## Contributing
 
 If you notice a bug, please report an issue or jump in a fix it. If you would like to contribute, please submit a PR.
+
+## Sources for Ancient Measurements
+
+- [BibleHub](https://biblehub.com/weights-and-measures/)
