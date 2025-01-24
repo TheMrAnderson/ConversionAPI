@@ -27,7 +27,7 @@
   "homepage": "https://github.com/TheMrAnderson/ConversionAPI#readme",
   "dependencies": {
     "babel-jest": "^29.7.0",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-rate-limit": "^6.11.2",
     "helmet": "^6.2.0",
