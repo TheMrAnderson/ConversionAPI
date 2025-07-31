@@ -35,7 +35,8 @@ const doc = {
     },
     {
       name: 'Diving',
-      description: 'Perform diving calculations'},
+      description: 'Perform diving calculations'
+    },
     {
       name: 'Electricity',
       description: 'Perform electricity calculations'
