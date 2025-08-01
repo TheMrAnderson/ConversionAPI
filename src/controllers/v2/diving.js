@@ -11,7 +11,7 @@ module.exports = (app) => {
     // #swagger.tags = ['Diving']
     const { metersSeaWater } = req.params;
     res.json({
-      result: ((metersSeaWater + 10) / 10).toFixed(2)
+      result: ((metersSeaWater / 10) +1).toFixed(2)
     })
   })
 
