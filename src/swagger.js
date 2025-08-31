@@ -34,6 +34,10 @@ const doc = {
       description: 'Convert distance'
     },
     {
+      name: 'Diving',
+      description: 'Perform diving calculations'
+    },
+    {
       name: 'Electricity',
       description: 'Perform electricity calculations'
     },

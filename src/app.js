@@ -29,6 +29,7 @@ app.use(limiter);
 require('./controllers/v2/area')(app);
 require('./controllers/v2/capacity')(app);
 require('./controllers/v2/distance')(app);
+require('./controllers/v2/diving')(app);
 require('./controllers/v2/electricity')(app);
 require('./controllers/v2/gearing')(app);
 require('./controllers/v2/hydraulic')(app);
